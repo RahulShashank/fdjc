@@ -1,0 +1,47 @@
+<style>
+	.btn-group>.btn:first-child {
+	    /* border-radius: 4px !important; */
+	}
+</style>
+<div tabindex="0">
+	<div class="modal-header">
+		<div class="modal-title">
+			<h4>{{ tailsign }}</h4>
+		</div>
+	</div>
+	<div class="modal-body">
+		<div class="row text-center">
+			<div id="modalBtn" class="btn-group">
+				<!--
+				<button type="button" class="btn btn-sm btn-primary" ng-model="displayModel" uib-btn-radio="'total'">Total</button>
+				<button type="button" class="btn btn-sm btn-primary" ng-model="displayModel" uib-btn-radio="'perHour'">Per Hour</button>
+				-->
+				<button id="modalTotalBtn" type="button" class="btn btn-sm btn-primary" ng-model="displayModel" uib-btn-radio="'hcTotal'">Total</button>
+				<button id="modalPerHourBtn" type="button" class="btn btn-sm btn-primary" ng-model="displayModel" uib-btn-radio="'hcPerHour'">Per Hour</button>
+			</div>
+		</div>
+		<br>	
+		<!--
+		<div ng-if="displayModel == 'total'">
+			<canvas height="100px" id="totalBarChart" class="chart chart-bar" chart-data="dataTotal" chart-labels="labels" chart-series="series" chart-options="options" chart-colors="colors" chart-dataset-override="datasetOverride"></canvas>
+		</div>
+		<div ng-if="displayModel == 'perHour'">
+			<canvas height="100px" id="perHourBarChart" class="chart chart-bar" chart-data="dataPerHour" chart-labels="labels" chart-series="series" chart-options="options" chart-colors="colors" chart-dataset-override="datasetOverride"></canvas>
+		</div>
+		-->
+		<div ng-if="displayModel == 'hcTotal'" style="width:100%; display:block">
+			<hc-chart options="chartOptionsTotal" ng-if="chartOptionsTotal">Placeholder for generic chart</hc-chart>
+		</div>
+		<div ng-if="displayModel == 'hcPerHour'" style="width:100%; display:block">
+			<hc-chart options="chartOptionsPerHour" ng-if="chartOptionsPerHour">Placeholder for generic chart</hc-chart>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<!--
+		<div class="pull-left">
+			<button type="button" class="btn btn-info" ng-click="export()">Download Chart</button>
+		</div>
+		-->
+		<button type="button" class="btn btn-default" ng-click="close()">Close</button>		
+	</div>
+</div>

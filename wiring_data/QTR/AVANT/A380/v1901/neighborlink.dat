@@ -1,0 +1,5891 @@
+####################################################################
+#  Copyright (C) 2006-2007 Thales Avionics-InFlight Systems LLC, 
+#                                                   Irvine, CA
+#
+#  File : neighborlink.dat - Topology Discovery input file
+#
+#  NOTE : The following convention is used
+#
+#
+#        SVDU   - Port Id 4 is P3[J2] and
+#                 Port Id 5 is P4[J2] connected to other SVDUs.  
+#                 Port-4 of SVDU1A connected to DSU.
+#
+######################################################################
+
+#=======================================================================
+# Headend and distribution neighborlinks
+#=======================================================================
+hostname = "DSU1",
+neighborName = "LAIC1",
+hostPortId = 2,
+neighborPortId = 2;
+
+hostname = "DSU1",
+neighborName = "DSU2",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "DSU1",
+neighborName = "DSU23",
+hostPortId = 5,
+neighborPortId = 6;
+
+hostname = "DSU1",
+neighborName = "DSU3",
+hostPortId = 7,
+neighborPortId = 8;
+
+hostname = "DSU1",
+neighborName = "ADBG10",
+hostPortId = 19,
+neighborPortId = 10;
+
+hostname = "DSU1",
+neighborName = "ADBG5",
+hostPortId = 20,
+neighborPortId = 10;
+
+hostname = "DSU1",
+neighborName = "ADBG1",
+hostPortId = 21,
+neighborPortId = 10;
+
+hostname = "DSU1",
+neighborName = "DSU2",
+hostPortId = 1,
+neighborPortId = 3;
+
+hostname = "DSU2",
+neighborName = "DSU3",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "DSU2",
+neighborName = "DSU4",
+hostPortId = 7,
+neighborPortId = 8;
+
+hostname = "DSU2",
+neighborName = "ICMT1",
+hostPortId = 9,
+neighborPortId = 5;
+
+hostname = "DSU2",
+neighborName = "ADBG4",
+hostPortId = 19,
+neighborPortId = 10;
+
+hostname = "DSU2",
+neighborName = "ADBG8",
+hostPortId = 20,
+neighborPortId = 10;
+
+hostname = "DSU2",
+neighborName = "ADBG2",
+hostPortId = 21,
+neighborPortId = 10;
+
+hostname = "DSU3",
+neighborName = "DSU4",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "DSU3",
+neighborName = "DSU5",
+hostPortId = 7,
+neighborPortId = 8;
+
+hostname = "DSU3",
+neighborName = "ADBG3",
+hostPortId = 19,
+neighborPortId = 10;
+
+hostname = "DSU3",
+neighborName = "ADBG6",
+hostPortId = 20,
+neighborPortId = 10;
+
+hostname = "DSU3",
+neighborName = "ADBG7",
+hostPortId = 21,
+neighborPortId = 10;
+
+hostname = "DSU4",
+neighborName = "DSU5",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "DSU4",
+neighborName = "DSU6",
+hostPortId = 7,
+neighborPortId = 8;
+
+hostname = "DSU4",
+neighborName = "ADBG11",
+hostPortId = 19,
+neighborPortId = 10;
+
+hostname = "DSU4",
+neighborName = "ADBG9",
+hostPortId = 20,
+neighborPortId = 10;
+
+hostname = "DSU4",
+neighborName = "ADBG4",
+hostPortId = 21,
+neighborPortId = 11;
+
+hostname = "DSU5",
+neighborName = "DSU6",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "DSU5",
+neighborName = "ADBG10",
+hostPortId = 19,
+neighborPortId = 11;
+
+hostname = "DSU5",
+neighborName = "ADBG5",
+hostPortId = 20,
+neighborPortId = 11;
+
+hostname = "DSU5",
+neighborName = "ADBG3",
+hostPortId = 21,
+neighborPortId = 11;
+
+hostname = "DSU6",
+neighborName = "ADBG9",
+hostPortId = 19,
+neighborPortId = 11;
+
+hostname = "DSU6",
+neighborName = "ADBG8",
+hostPortId = 20,
+neighborPortId = 11;
+
+hostname = "DSU6",
+neighborName = "ADBG2",
+hostPortId = 21,
+neighborPortId = 11;
+
+#=======================================================================
+# Seatend neighborlinks
+#=======================================================================
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG1",
+neighborName = "ICMT1",
+hostPortId = 7,
+neighborPortId = 4;
+
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG6",
+neighborName = "ICMT2",
+hostPortId = 7,
+neighborPortId = 4;
+
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG8",
+neighborName = "ICMT3",
+hostPortId = 7,
+neighborPortId = 4;
+
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG1",
+neighborName = "SVDU640L",
+hostPortId = 8,
+neighborPortId = 4;
+
+hostname = "SVDU640L",
+neighborName = "SVDU640R",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG4",
+neighborName = "SVDU663L",
+hostPortId = 8,
+neighborPortId = 4;
+
+hostname = "SVDU663L",
+neighborName = "SVDU663R",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "ADBG6",
+neighborName = "SVDU675L",
+hostPortId = 8,
+neighborPortId = 4;
+
+hostname = "SVDU675L",
+neighborName = "SVDU675R",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# Beginning of loop A ############################################
+#
+# AVANT LoopID A1-1
+hostname = "ADBG1",
+neighborName = "SVDU47A",
+hostPortId = 6,
+neighborPortId = 4;
+
+hostname = "SVDU47A",
+neighborName = "TPMU47A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47A",
+neighborName = "SVDU47B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU47B",
+neighborName = "TPMU47B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47B",
+neighborName = "SVDU47C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU47C",
+neighborName = "TPMU47C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A2-1
+hostname = "SVDU47C",
+neighborName = "SVDU46A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46A",
+neighborName = "TPMU46A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46A",
+neighborName = "SVDU46B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46B",
+neighborName = "TPMU46B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46B",
+neighborName = "SVDU46C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46C",
+neighborName = "TPMU46C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A3-1
+hostname = "SVDU46C",
+neighborName = "SVDU45A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45A",
+neighborName = "TPMU45A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45A",
+neighborName = "SVDU45B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45B",
+neighborName = "TPMU45B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45B",
+neighborName = "SVDU45C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45C",
+neighborName = "TPMU45C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A4-1
+hostname = "SVDU45C",
+neighborName = "SVDU44A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44A",
+neighborName = "TPMU44A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44A",
+neighborName = "SVDU44B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44B",
+neighborName = "TPMU44B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44B",
+neighborName = "SVDU44C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44C",
+neighborName = "TPMU44C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A5-1
+hostname = "SVDU44C",
+neighborName = "SVDU43A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43A",
+neighborName = "TPMU43A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU43A",
+neighborName = "SVDU43B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43B",
+neighborName = "TPMU43B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU43B",
+neighborName = "SVDU43C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43C",
+neighborName = "TPMU43C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A6-1
+hostname = "SVDU43C",
+neighborName = "SVDU42A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42A",
+neighborName = "TPMU42A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU42A",
+neighborName = "SVDU42B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42B",
+neighborName = "TPMU42B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU42B",
+neighborName = "SVDU42C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42C",
+neighborName = "TPMU42C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A7-1
+hostname = "SVDU42C",
+neighborName = "SVDU41A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41A",
+neighborName = "TPMU41A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41A",
+neighborName = "SVDU41B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41B",
+neighborName = "TPMU41B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41B",
+neighborName = "SVDU41C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41C",
+neighborName = "TPMU41C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A8-3
+hostname = "SVDU41A",
+neighborName = "SVDU40A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40A",
+neighborName = "TPMU40A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41B",
+neighborName = "SVDU40B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40B",
+neighborName = "TPMU40B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41C",
+neighborName = "SVDU40C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40C",
+neighborName = "TPMU40C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A9-2
+hostname = "SVDU41C",
+neighborName = "SVDU49C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU49C",
+neighborName = "TPMU49C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU49C",
+neighborName = "SVDU49B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU49B",
+neighborName = "TPMU49B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU49B",
+neighborName = "SVDU49A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU49A",
+neighborName = "TPMU49A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A10-2
+hostname = "SVDU49A",
+neighborName = "SVDU48C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48C",
+neighborName = "TPMU48C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48C",
+neighborName = "SVDU48B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48B",
+neighborName = "TPMU48B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48B",
+neighborName = "SVDU48A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48A",
+neighborName = "TPMU48A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A11-1
+hostname = "SVDU48A",
+neighborName = "SVDU54A",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU54A",
+neighborName = "TPMU54A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54A",
+neighborName = "SVDU54B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54B",
+neighborName = "TPMU54B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54B",
+neighborName = "SVDU54C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54C",
+neighborName = "TPMU54C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A12-1
+hostname = "SVDU54C",
+neighborName = "SVDU55A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55A",
+neighborName = "TPMU55A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55A",
+neighborName = "SVDU55B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55B",
+neighborName = "TPMU55B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55B",
+neighborName = "SVDU55C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55C",
+neighborName = "TPMU55C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A13-1
+hostname = "SVDU55C",
+neighborName = "SVDU56A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56A",
+neighborName = "TPMU56A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56A",
+neighborName = "SVDU56B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56B",
+neighborName = "TPMU56B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56B",
+neighborName = "SVDU56C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56C",
+neighborName = "TPMU56C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A14-2
+hostname = "SVDU56C",
+neighborName = "SVDU51C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU51C",
+neighborName = "TPMU51C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51C",
+neighborName = "SVDU51B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51B",
+neighborName = "TPMU51B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51B",
+neighborName = "SVDU51A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51A",
+neighborName = "TPMU51A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A15-3
+hostname = "SVDU51C",
+neighborName = "SVDU50C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50C",
+neighborName = "TPMU50C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51B",
+neighborName = "SVDU50B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50B",
+neighborName = "TPMU50B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51A",
+neighborName = "SVDU50A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50A",
+neighborName = "TPMU50A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A16-2
+hostname = "SVDU51A",
+neighborName = "SVDU52C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52C",
+neighborName = "TPMU52C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52C",
+neighborName = "SVDU52B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52B",
+neighborName = "TPMU52B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52B",
+neighborName = "SVDU52A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52A",
+neighborName = "TPMU52A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: A17-4
+hostname = "SVDU52A",
+neighborName = "SVDU652L",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: A18-2
+hostname = "SVDU52A",
+neighborName = "SVDU53C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53C",
+neighborName = "TPMU53C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53C",
+neighborName = "SVDU53B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53B",
+neighborName = "TPMU53B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53B",
+neighborName = "SVDU53A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53A",
+neighborName = "TPMU53A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG2",
+neighborName = "SVDU53A",
+hostPortId = 6,
+neighborPortId = 4;
+
+#
+# End of loop A
+#
+
+#
+# Beginning of loop B ############################################
+#
+# AVANT LoopID B1-1
+hostname = "ADBG1",
+neighborName = "SVDU46D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46D",
+neighborName = "TPMU46D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46D",
+neighborName = "SVDU46E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46E",
+neighborName = "TPMU46E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46E",
+neighborName = "SVDU46F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46F",
+neighborName = "TPMU46F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46F",
+neighborName = "SVDU46G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46G",
+neighborName = "TPMU46G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B2-1
+hostname = "SVDU46G",
+neighborName = "SVDU45D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45D",
+neighborName = "TPMU45D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45D",
+neighborName = "SVDU45E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45E",
+neighborName = "TPMU45E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45E",
+neighborName = "SVDU45F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45F",
+neighborName = "TPMU45F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45F",
+neighborName = "SVDU45G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45G",
+neighborName = "TPMU45G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B3-4
+hostname = "SVDU45D",
+neighborName = "SVDU645M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: B4-1
+hostname = "SVDU45G",
+neighborName = "SVDU44D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44D",
+neighborName = "TPMU44D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44D",
+neighborName = "SVDU44E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44E",
+neighborName = "TPMU44E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44E",
+neighborName = "SVDU44F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44F",
+neighborName = "TPMU44F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44F",
+neighborName = "SVDU44G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44G",
+neighborName = "TPMU44G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B5-3
+hostname = "SVDU44D",
+neighborName = "SVDU43D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU43D",
+neighborName = "TPMU43D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44E",
+neighborName = "SVDU43E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU43E",
+neighborName = "TPMU43E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44F",
+neighborName = "SVDU43F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU43F",
+neighborName = "TPMU43F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44G",
+neighborName = "SVDU43G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU43G",
+neighborName = "TPMU43G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B6-2
+hostname = "SVDU44G",
+neighborName = "SVDU48G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU48G",
+neighborName = "TPMU48G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48G",
+neighborName = "SVDU48F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48F",
+neighborName = "TPMU48F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48F",
+neighborName = "SVDU48E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48E",
+neighborName = "TPMU48E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48E",
+neighborName = "SVDU48D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48D",
+neighborName = "TPMU48D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B7-2
+hostname = "SVDU48D",
+neighborName = "SVDU47G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU47G",
+neighborName = "TPMU47G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47G",
+neighborName = "SVDU47F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU47F",
+neighborName = "TPMU47F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47F",
+neighborName = "SVDU47E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU47E",
+neighborName = "TPMU47E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47E",
+neighborName = "SVDU47D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU47D",
+neighborName = "TPMU47D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B8-1
+hostname = "SVDU47D",
+neighborName = "SVDU54D",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU54D",
+neighborName = "TPMU54D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54D",
+neighborName = "SVDU54E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54E",
+neighborName = "TPMU54E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54E",
+neighborName = "SVDU54F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54F",
+neighborName = "TPMU54F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54F",
+neighborName = "SVDU54G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54G",
+neighborName = "TPMU54G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B9-1
+hostname = "SVDU54G",
+neighborName = "SVDU55D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55D",
+neighborName = "TPMU55D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55D",
+neighborName = "SVDU55E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55E",
+neighborName = "TPMU55E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55E",
+neighborName = "SVDU55F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55F",
+neighborName = "TPMU55F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55F",
+neighborName = "SVDU55G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55G",
+neighborName = "TPMU55G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B10-1
+hostname = "SVDU55G",
+neighborName = "SVDU56D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56D",
+neighborName = "TPMU56D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56D",
+neighborName = "SVDU56E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56E",
+neighborName = "TPMU56E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56E",
+neighborName = "SVDU56F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56F",
+neighborName = "TPMU56F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56F",
+neighborName = "SVDU56G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56G",
+neighborName = "TPMU56G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B11-2
+hostname = "SVDU56G",
+neighborName = "SVDU51G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU51G",
+neighborName = "TPMU51G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51G",
+neighborName = "SVDU51F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51F",
+neighborName = "TPMU51F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51F",
+neighborName = "SVDU51E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51E",
+neighborName = "TPMU51E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51E",
+neighborName = "SVDU51D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51D",
+neighborName = "TPMU51D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B12-3
+hostname = "SVDU51G",
+neighborName = "SVDU50G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50G",
+neighborName = "TPMU50G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51F",
+neighborName = "SVDU50F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50F",
+neighborName = "TPMU50F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51E",
+neighborName = "SVDU50E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50E",
+neighborName = "TPMU50E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51D",
+neighborName = "SVDU50D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50D",
+neighborName = "TPMU50D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B13-2
+hostname = "SVDU51D",
+neighborName = "SVDU52G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52G",
+neighborName = "TPMU52G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52G",
+neighborName = "SVDU52F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52F",
+neighborName = "TPMU52F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52F",
+neighborName = "SVDU52E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52E",
+neighborName = "TPMU52E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52E",
+neighborName = "SVDU52D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52D",
+neighborName = "TPMU52D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: B14-4
+hostname = "SVDU52D",
+neighborName = "SVDU652M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: B15-2
+hostname = "SVDU52D",
+neighborName = "SVDU53G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53G",
+neighborName = "TPMU53G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53G",
+neighborName = "SVDU53F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53F",
+neighborName = "TPMU53F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53F",
+neighborName = "SVDU53E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53E",
+neighborName = "TPMU53E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53E",
+neighborName = "SVDU53D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53D",
+neighborName = "TPMU53D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG2",
+neighborName = "SVDU53D",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# End of loop B
+#
+
+#
+# Beginning of loop C ############################################
+#
+# AVANT LoopID C1-1
+hostname = "ADBG1",
+neighborName = "SVDU47H",
+hostPortId = 3,
+neighborPortId = 4;
+
+hostname = "SVDU47H",
+neighborName = "TPMU47H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47H",
+neighborName = "SVDU47J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU47J",
+neighborName = "TPMU47J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU47J",
+neighborName = "SVDU47K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU47K",
+neighborName = "TPMU47K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C2-1
+hostname = "SVDU47K",
+neighborName = "SVDU46H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46H",
+neighborName = "TPMU46H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46H",
+neighborName = "SVDU46J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46J",
+neighborName = "TPMU46J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU46J",
+neighborName = "SVDU46K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU46K",
+neighborName = "TPMU46K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C3-1
+hostname = "SVDU46K",
+neighborName = "SVDU45H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45H",
+neighborName = "TPMU45H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45H",
+neighborName = "SVDU45J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45J",
+neighborName = "TPMU45J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU45J",
+neighborName = "SVDU45K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU45K",
+neighborName = "TPMU45K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C4-1
+hostname = "SVDU45K",
+neighborName = "SVDU44H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44H",
+neighborName = "TPMU44H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44H",
+neighborName = "SVDU44J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44J",
+neighborName = "TPMU44J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU44J",
+neighborName = "SVDU44K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU44K",
+neighborName = "TPMU44K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C5-1
+hostname = "SVDU44K",
+neighborName = "SVDU43H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43H",
+neighborName = "TPMU43H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU43H",
+neighborName = "SVDU43J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43J",
+neighborName = "TPMU43J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU43J",
+neighborName = "SVDU43K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU43K",
+neighborName = "TPMU43K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C6-1
+hostname = "SVDU43K",
+neighborName = "SVDU42H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42H",
+neighborName = "TPMU42H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU42H",
+neighborName = "SVDU42J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42J",
+neighborName = "TPMU42J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU42J",
+neighborName = "SVDU42K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU42K",
+neighborName = "TPMU42K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C7-1
+hostname = "SVDU42K",
+neighborName = "SVDU41H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41H",
+neighborName = "TPMU41H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41H",
+neighborName = "SVDU41J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41J",
+neighborName = "TPMU41J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41J",
+neighborName = "SVDU41K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU41K",
+neighborName = "TPMU41K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C8-3
+hostname = "SVDU41H",
+neighborName = "SVDU40H",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40H",
+neighborName = "TPMU40H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41J",
+neighborName = "SVDU40J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40J",
+neighborName = "TPMU40J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU41K",
+neighborName = "SVDU40K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU40K",
+neighborName = "TPMU40K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C9-2
+hostname = "SVDU41K",
+neighborName = "SVDU49K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU49K",
+neighborName = "TPMU49K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU49K",
+neighborName = "SVDU49J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU49J",
+neighborName = "TPMU49J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU49J",
+neighborName = "SVDU49H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU49H",
+neighborName = "TPMU49H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C10-2
+hostname = "SVDU49H",
+neighborName = "SVDU48K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48K",
+neighborName = "TPMU48K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48K",
+neighborName = "SVDU48J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48J",
+neighborName = "TPMU48J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU48J",
+neighborName = "SVDU48H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU48H",
+neighborName = "TPMU48H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C11-1
+hostname = "SVDU48H",
+neighborName = "SVDU54H",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU54H",
+neighborName = "TPMU54H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54H",
+neighborName = "SVDU54J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54J",
+neighborName = "TPMU54J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU54J",
+neighborName = "SVDU54K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU54K",
+neighborName = "TPMU54K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C12-1
+hostname = "SVDU54K",
+neighborName = "SVDU55H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55H",
+neighborName = "TPMU55H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55H",
+neighborName = "SVDU55J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55J",
+neighborName = "TPMU55J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU55J",
+neighborName = "SVDU55K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU55K",
+neighborName = "TPMU55K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C13-1
+hostname = "SVDU55K",
+neighborName = "SVDU56H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56H",
+neighborName = "TPMU56H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56H",
+neighborName = "SVDU56J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56J",
+neighborName = "TPMU56J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU56J",
+neighborName = "SVDU56K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU56K",
+neighborName = "TPMU56K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C14-2
+hostname = "SVDU56K",
+neighborName = "SVDU51K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU51K",
+neighborName = "TPMU51K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51K",
+neighborName = "SVDU51J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51J",
+neighborName = "TPMU51J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51J",
+neighborName = "SVDU51H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU51H",
+neighborName = "TPMU51H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C15-3
+hostname = "SVDU51K",
+neighborName = "SVDU50K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50K",
+neighborName = "TPMU50K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51J",
+neighborName = "SVDU50J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50J",
+neighborName = "TPMU50J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU51H",
+neighborName = "SVDU50H",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU50H",
+neighborName = "TPMU50H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C16-2
+hostname = "SVDU51H",
+neighborName = "SVDU52K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52K",
+neighborName = "TPMU52K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52K",
+neighborName = "SVDU52J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52J",
+neighborName = "TPMU52J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU52J",
+neighborName = "SVDU52H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU52H",
+neighborName = "TPMU52H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: C17-4
+hostname = "SVDU52H",
+neighborName = "SVDU652R",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: C18-2
+hostname = "SVDU52H",
+neighborName = "SVDU53K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53K",
+neighborName = "TPMU53K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53K",
+neighborName = "SVDU53J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53J",
+neighborName = "TPMU53J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU53J",
+neighborName = "SVDU53H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU53H",
+neighborName = "TPMU53H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG2",
+neighborName = "SVDU53H",
+hostPortId = 3,
+neighborPortId = 4;
+
+#
+# End of loop C
+#
+
+#
+# Beginning of loop D ############################################
+#
+# AVANT LoopID D1-1
+hostname = "ADBG3",
+neighborName = "SVDU60A",
+hostPortId = 6,
+neighborPortId = 4;
+
+hostname = "SVDU60A",
+neighborName = "TPMU60A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60A",
+neighborName = "SVDU60B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60B",
+neighborName = "TPMU60B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60B",
+neighborName = "SVDU60C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60C",
+neighborName = "TPMU60C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D2-1
+hostname = "SVDU60C",
+neighborName = "SVDU59A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59A",
+neighborName = "TPMU59A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59A",
+neighborName = "SVDU59B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59B",
+neighborName = "TPMU59B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59B",
+neighborName = "SVDU59C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59C",
+neighborName = "TPMU59C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D3-1
+hostname = "SVDU59C",
+neighborName = "SVDU58A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58A",
+neighborName = "TPMU58A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58A",
+neighborName = "SVDU58B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58B",
+neighborName = "TPMU58B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58B",
+neighborName = "SVDU58C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58C",
+neighborName = "TPMU58C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D4-1
+hostname = "SVDU58C",
+neighborName = "SVDU57A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57A",
+neighborName = "TPMU57A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57A",
+neighborName = "SVDU57B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57B",
+neighborName = "TPMU57B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57B",
+neighborName = "SVDU57C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57C",
+neighborName = "TPMU57C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D5-2
+hostname = "SVDU57C",
+neighborName = "SVDU62C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU62C",
+neighborName = "TPMU62C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU62C",
+neighborName = "SVDU62B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU62B",
+neighborName = "TPMU62B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU62B",
+neighborName = "SVDU62A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU62A",
+neighborName = "TPMU62A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D6-2
+hostname = "SVDU62A",
+neighborName = "SVDU61C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61C",
+neighborName = "TPMU61C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61C",
+neighborName = "SVDU61B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61B",
+neighborName = "TPMU61B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61B",
+neighborName = "SVDU61A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61A",
+neighborName = "TPMU61A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D7-1
+hostname = "SVDU61A",
+neighborName = "SVDU70A",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU70A",
+neighborName = "TPMU70A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70A",
+neighborName = "SVDU70B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70B",
+neighborName = "TPMU70B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70B",
+neighborName = "SVDU70C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70C",
+neighborName = "TPMU70C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D8-2
+hostname = "SVDU70C",
+neighborName = "SVDU64C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU64C",
+neighborName = "TPMU64C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64C",
+neighborName = "SVDU64B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64B",
+neighborName = "TPMU64B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64B",
+neighborName = "SVDU64A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64A",
+neighborName = "TPMU64A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D9-3
+hostname = "SVDU64C",
+neighborName = "SVDU63C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63C",
+neighborName = "TPMU63C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64B",
+neighborName = "SVDU63B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63B",
+neighborName = "TPMU63B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64A",
+neighborName = "SVDU63A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63A",
+neighborName = "TPMU63A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D10-2
+hostname = "SVDU64A",
+neighborName = "SVDU65C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65C",
+neighborName = "TPMU65C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65C",
+neighborName = "SVDU65B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65B",
+neighborName = "TPMU65B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65B",
+neighborName = "SVDU65A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65A",
+neighborName = "TPMU65A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D11-2
+hostname = "SVDU65A",
+neighborName = "SVDU66C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66C",
+neighborName = "TPMU66C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66C",
+neighborName = "SVDU66B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66B",
+neighborName = "TPMU66B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66B",
+neighborName = "SVDU66A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66A",
+neighborName = "TPMU66A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D12-2
+hostname = "SVDU66A",
+neighborName = "SVDU67C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67C",
+neighborName = "TPMU67C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67C",
+neighborName = "SVDU67B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67B",
+neighborName = "TPMU67B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67B",
+neighborName = "SVDU67A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67A",
+neighborName = "TPMU67A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D13-2
+hostname = "SVDU67A",
+neighborName = "SVDU68C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68C",
+neighborName = "TPMU68C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68C",
+neighborName = "SVDU68B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68B",
+neighborName = "TPMU68B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68B",
+neighborName = "SVDU68A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68A",
+neighborName = "TPMU68A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: D14-2
+hostname = "SVDU68A",
+neighborName = "SVDU69C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69C",
+neighborName = "TPMU69C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69C",
+neighborName = "SVDU69B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69B",
+neighborName = "TPMU69B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69B",
+neighborName = "SVDU69A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69A",
+neighborName = "TPMU69A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG4",
+neighborName = "SVDU69A",
+hostPortId = 6,
+neighborPortId = 4;
+
+#
+# End of loop D
+#
+
+#
+# Beginning of loop E ############################################
+#
+# AVANT LoopID E1-1
+hostname = "ADBG3",
+neighborName = "SVDU60D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60D",
+neighborName = "TPMU60D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60D",
+neighborName = "SVDU60E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60E",
+neighborName = "TPMU60E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60E",
+neighborName = "SVDU60F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60F",
+neighborName = "TPMU60F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60F",
+neighborName = "SVDU60G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60G",
+neighborName = "TPMU60G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E2-1
+hostname = "SVDU60G",
+neighborName = "SVDU59D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59D",
+neighborName = "TPMU59D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59D",
+neighborName = "SVDU59E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59E",
+neighborName = "TPMU59E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59E",
+neighborName = "SVDU59F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59F",
+neighborName = "TPMU59F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59F",
+neighborName = "SVDU59G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59G",
+neighborName = "TPMU59G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E3-1
+hostname = "SVDU59G",
+neighborName = "SVDU58D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58D",
+neighborName = "TPMU58D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58D",
+neighborName = "SVDU58E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58E",
+neighborName = "TPMU58E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58E",
+neighborName = "SVDU58F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58F",
+neighborName = "TPMU58F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58F",
+neighborName = "SVDU58G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58G",
+neighborName = "TPMU58G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E4-1
+hostname = "SVDU58G",
+neighborName = "SVDU57D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57D",
+neighborName = "TPMU57D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57D",
+neighborName = "SVDU57E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57E",
+neighborName = "TPMU57E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57E",
+neighborName = "SVDU57F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57F",
+neighborName = "TPMU57F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57F",
+neighborName = "SVDU57G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57G",
+neighborName = "TPMU57G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E5-2
+hostname = "SVDU57G",
+neighborName = "SVDU61G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU61G",
+neighborName = "TPMU61G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61G",
+neighborName = "SVDU61F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61F",
+neighborName = "TPMU61F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61F",
+neighborName = "SVDU61E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61E",
+neighborName = "TPMU61E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61E",
+neighborName = "SVDU61D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61D",
+neighborName = "TPMU61D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E6-1
+hostname = "SVDU61D",
+neighborName = "SVDU70D",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU70D",
+neighborName = "TPMU70D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70D",
+neighborName = "SVDU70E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70E",
+neighborName = "TPMU70E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70E",
+neighborName = "SVDU70F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70F",
+neighborName = "TPMU70F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70F",
+neighborName = "SVDU70G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70G",
+neighborName = "TPMU70G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E7-2
+hostname = "SVDU70G",
+neighborName = "SVDU64G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU64G",
+neighborName = "TPMU64G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64G",
+neighborName = "SVDU64F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64F",
+neighborName = "TPMU64F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64F",
+neighborName = "SVDU64E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64E",
+neighborName = "TPMU64E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64E",
+neighborName = "SVDU64D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64D",
+neighborName = "TPMU64D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E8-3
+hostname = "SVDU64G",
+neighborName = "SVDU63G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63G",
+neighborName = "TPMU63G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64F",
+neighborName = "SVDU63F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63F",
+neighborName = "TPMU63F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64E",
+neighborName = "SVDU63E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63E",
+neighborName = "TPMU63E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64D",
+neighborName = "SVDU63D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63D",
+neighborName = "TPMU63D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E9-2
+hostname = "SVDU64D",
+neighborName = "SVDU65G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65G",
+neighborName = "TPMU65G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65G",
+neighborName = "SVDU65F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65F",
+neighborName = "TPMU65F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65F",
+neighborName = "SVDU65E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65E",
+neighborName = "TPMU65E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65E",
+neighborName = "SVDU65D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65D",
+neighborName = "TPMU65D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E10-4
+hostname = "SVDU65D",
+neighborName = "SVDU665M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: E11-2
+hostname = "SVDU65D",
+neighborName = "SVDU66G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66G",
+neighborName = "TPMU66G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66G",
+neighborName = "SVDU66F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66F",
+neighborName = "TPMU66F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66F",
+neighborName = "SVDU66E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66E",
+neighborName = "TPMU66E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66E",
+neighborName = "SVDU66D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66D",
+neighborName = "TPMU66D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E12-2
+hostname = "SVDU66D",
+neighborName = "SVDU67G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67G",
+neighborName = "TPMU67G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67G",
+neighborName = "SVDU67F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67F",
+neighborName = "TPMU67F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67F",
+neighborName = "SVDU67E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67E",
+neighborName = "TPMU67E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E13-2
+hostname = "SVDU67E",
+neighborName = "SVDU68G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68G",
+neighborName = "TPMU68G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68G",
+neighborName = "SVDU68F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68F",
+neighborName = "TPMU68F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68F",
+neighborName = "SVDU68E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68E",
+neighborName = "TPMU68E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E14-2
+hostname = "SVDU68E",
+neighborName = "SVDU69G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69G",
+neighborName = "TPMU69G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69G",
+neighborName = "SVDU69F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69F",
+neighborName = "TPMU69F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69F",
+neighborName = "SVDU69E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69E",
+neighborName = "TPMU69E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69E",
+neighborName = "SVDU69D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69D",
+neighborName = "TPMU69D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: E15-3
+hostname = "SVDU69D",
+neighborName = "SVDU68D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU68D",
+neighborName = "TPMU68D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG4",
+neighborName = "SVDU69D",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# End of loop E
+#
+
+#
+# Beginning of loop F ############################################
+#
+# AVANT LoopID F1-1
+hostname = "ADBG3",
+neighborName = "SVDU60H",
+hostPortId = 3,
+neighborPortId = 4;
+
+hostname = "SVDU60H",
+neighborName = "TPMU60H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60H",
+neighborName = "SVDU60J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60J",
+neighborName = "TPMU60J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU60J",
+neighborName = "SVDU60K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU60K",
+neighborName = "TPMU60K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F2-1
+hostname = "SVDU60K",
+neighborName = "SVDU59H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59H",
+neighborName = "TPMU59H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59H",
+neighborName = "SVDU59J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59J",
+neighborName = "TPMU59J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU59J",
+neighborName = "SVDU59K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU59K",
+neighborName = "TPMU59K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F3-1
+hostname = "SVDU59K",
+neighborName = "SVDU58H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58H",
+neighborName = "TPMU58H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58H",
+neighborName = "SVDU58J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58J",
+neighborName = "TPMU58J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU58J",
+neighborName = "SVDU58K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU58K",
+neighborName = "TPMU58K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F4-1
+hostname = "SVDU58K",
+neighborName = "SVDU57H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57H",
+neighborName = "TPMU57H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57H",
+neighborName = "SVDU57J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57J",
+neighborName = "TPMU57J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU57J",
+neighborName = "SVDU57K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU57K",
+neighborName = "TPMU57K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F5-2
+hostname = "SVDU57K",
+neighborName = "SVDU62K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU62K",
+neighborName = "TPMU62K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU62K",
+neighborName = "SVDU62J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU62J",
+neighborName = "TPMU62J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU62J",
+neighborName = "SVDU62H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU62H",
+neighborName = "TPMU62H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F6-2
+hostname = "SVDU62H",
+neighborName = "SVDU61K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61K",
+neighborName = "TPMU61K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61K",
+neighborName = "SVDU61J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61J",
+neighborName = "TPMU61J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU61J",
+neighborName = "SVDU61H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU61H",
+neighborName = "TPMU61H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F7-1
+hostname = "SVDU61H",
+neighborName = "SVDU70H",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU70H",
+neighborName = "TPMU70H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70H",
+neighborName = "SVDU70J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70J",
+neighborName = "TPMU70J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU70J",
+neighborName = "SVDU70K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU70K",
+neighborName = "TPMU70K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F8-2
+hostname = "SVDU70K",
+neighborName = "SVDU64K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU64K",
+neighborName = "TPMU64K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64K",
+neighborName = "SVDU64J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64J",
+neighborName = "TPMU64J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64J",
+neighborName = "SVDU64H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU64H",
+neighborName = "TPMU64H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F9-3
+hostname = "SVDU64K",
+neighborName = "SVDU63K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63K",
+neighborName = "TPMU63K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64J",
+neighborName = "SVDU63J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63J",
+neighborName = "TPMU63J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU64H",
+neighborName = "SVDU63H",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU63H",
+neighborName = "TPMU63H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F10-2
+hostname = "SVDU64H",
+neighborName = "SVDU65K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65K",
+neighborName = "TPMU65K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65K",
+neighborName = "SVDU65J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65J",
+neighborName = "TPMU65J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU65J",
+neighborName = "SVDU65H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU65H",
+neighborName = "TPMU65H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F11-2
+hostname = "SVDU65H",
+neighborName = "SVDU66K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66K",
+neighborName = "TPMU66K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66K",
+neighborName = "SVDU66J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66J",
+neighborName = "TPMU66J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU66J",
+neighborName = "SVDU66H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU66H",
+neighborName = "TPMU66H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F12-2
+hostname = "SVDU66H",
+neighborName = "SVDU67K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67K",
+neighborName = "TPMU67K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67K",
+neighborName = "SVDU67J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67J",
+neighborName = "TPMU67J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU67J",
+neighborName = "SVDU67H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU67H",
+neighborName = "TPMU67H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F13-2
+hostname = "SVDU67H",
+neighborName = "SVDU68K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68K",
+neighborName = "TPMU68K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68K",
+neighborName = "SVDU68J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68J",
+neighborName = "TPMU68J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU68J",
+neighborName = "SVDU68H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU68H",
+neighborName = "TPMU68H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: F14-2
+hostname = "SVDU68H",
+neighborName = "SVDU69K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69K",
+neighborName = "TPMU69K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69K",
+neighborName = "SVDU69J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69J",
+neighborName = "TPMU69J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU69J",
+neighborName = "SVDU69H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU69H",
+neighborName = "TPMU69H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG4",
+neighborName = "SVDU69H",
+hostPortId = 3,
+neighborPortId = 4;
+
+#
+# End of loop F
+#
+
+#
+# Beginning of loop G ############################################
+#
+# AVANT LoopID G1-1
+hostname = "ADBG5",
+neighborName = "SVDU71A",
+hostPortId = 6,
+neighborPortId = 4;
+
+hostname = "SVDU71A",
+neighborName = "TPMU71A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71A",
+neighborName = "SVDU71B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71B",
+neighborName = "TPMU71B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71B",
+neighborName = "SVDU71C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71C",
+neighborName = "TPMU71C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G2-2
+hostname = "SVDU71C",
+neighborName = "SVDU73C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU73C",
+neighborName = "TPMU73C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73C",
+neighborName = "SVDU73B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73B",
+neighborName = "TPMU73B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73B",
+neighborName = "SVDU73A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73A",
+neighborName = "TPMU73A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G3-2
+hostname = "SVDU73A",
+neighborName = "SVDU72C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72C",
+neighborName = "TPMU72C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72C",
+neighborName = "SVDU72B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72B",
+neighborName = "TPMU72B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72B",
+neighborName = "SVDU72A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72A",
+neighborName = "TPMU72A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G4-1
+hostname = "SVDU72A",
+neighborName = "SVDU81A",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU81A",
+neighborName = "TPMU81A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81A",
+neighborName = "SVDU81B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81B",
+neighborName = "TPMU81B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81B",
+neighborName = "SVDU81C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81C",
+neighborName = "TPMU81C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G5-1
+hostname = "SVDU81C",
+neighborName = "SVDU82A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82A",
+neighborName = "TPMU82A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82A",
+neighborName = "SVDU82B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82B",
+neighborName = "TPMU82B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82B",
+neighborName = "SVDU82C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82C",
+neighborName = "TPMU82C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G6-1
+hostname = "SVDU82C",
+neighborName = "SVDU83A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83A",
+neighborName = "TPMU83A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83A",
+neighborName = "SVDU83B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83B",
+neighborName = "TPMU83B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83B",
+neighborName = "SVDU83C",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83C",
+neighborName = "TPMU83C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G7-2
+hostname = "SVDU83C",
+neighborName = "SVDU76C",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU76C",
+neighborName = "TPMU76C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76C",
+neighborName = "SVDU76B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU76B",
+neighborName = "TPMU76B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76B",
+neighborName = "SVDU76A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU76A",
+neighborName = "TPMU76A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G8-3
+hostname = "SVDU76C",
+neighborName = "SVDU75C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75C",
+neighborName = "TPMU75C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76B",
+neighborName = "SVDU75B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75B",
+neighborName = "TPMU75B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76A",
+neighborName = "SVDU75A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75A",
+neighborName = "TPMU75A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G9-2
+hostname = "SVDU76A",
+neighborName = "SVDU77C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77C",
+neighborName = "TPMU77C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU77C",
+neighborName = "SVDU77B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77B",
+neighborName = "TPMU77B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU77B",
+neighborName = "SVDU77A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77A",
+neighborName = "TPMU77A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G10-2
+hostname = "SVDU77A",
+neighborName = "SVDU78C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78C",
+neighborName = "TPMU78C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78C",
+neighborName = "SVDU78B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78B",
+neighborName = "TPMU78B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78B",
+neighborName = "SVDU78A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78A",
+neighborName = "TPMU78A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G11-2
+hostname = "SVDU78A",
+neighborName = "SVDU79C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79C",
+neighborName = "TPMU79C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79C",
+neighborName = "SVDU79B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79B",
+neighborName = "TPMU79B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79B",
+neighborName = "SVDU79A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79A",
+neighborName = "TPMU79A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: G12-2
+hostname = "SVDU79A",
+neighborName = "SVDU80C",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80C",
+neighborName = "TPMU80C",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80C",
+neighborName = "SVDU80B",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80B",
+neighborName = "TPMU80B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80B",
+neighborName = "SVDU80A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80A",
+neighborName = "TPMU80A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG6",
+neighborName = "SVDU80A",
+hostPortId = 6,
+neighborPortId = 4;
+
+#
+# End of loop G
+#
+
+#
+# Beginning of loop H ############################################
+#
+# AVANT LoopID H1-1
+hostname = "ADBG5",
+neighborName = "SVDU71D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71D",
+neighborName = "TPMU71D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71D",
+neighborName = "SVDU71E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71E",
+neighborName = "TPMU71E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71E",
+neighborName = "SVDU71F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71F",
+neighborName = "TPMU71F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71F",
+neighborName = "SVDU71G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71G",
+neighborName = "TPMU71G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H2-2
+hostname = "SVDU71G",
+neighborName = "SVDU74G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU74G",
+neighborName = "TPMU74G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU74G",
+neighborName = "SVDU74F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU74F",
+neighborName = "TPMU74F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU74F",
+neighborName = "SVDU74E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU74E",
+neighborName = "TPMU74E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU74E",
+neighborName = "SVDU74D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU74D",
+neighborName = "TPMU74D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H3-2
+hostname = "SVDU74D",
+neighborName = "SVDU73G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73G",
+neighborName = "TPMU73G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73G",
+neighborName = "SVDU73F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73F",
+neighborName = "TPMU73F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73F",
+neighborName = "SVDU73E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73E",
+neighborName = "TPMU73E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73E",
+neighborName = "SVDU73D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73D",
+neighborName = "TPMU73D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H4-2
+hostname = "SVDU73D",
+neighborName = "SVDU72G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72G",
+neighborName = "TPMU72G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72G",
+neighborName = "SVDU72F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72F",
+neighborName = "TPMU72F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72F",
+neighborName = "SVDU72E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72E",
+neighborName = "TPMU72E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72E",
+neighborName = "SVDU72D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72D",
+neighborName = "TPMU72D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H5-1
+hostname = "SVDU72D",
+neighborName = "SVDU81D",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU81D",
+neighborName = "TPMU81D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81D",
+neighborName = "SVDU81E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81E",
+neighborName = "TPMU81E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81E",
+neighborName = "SVDU81F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81F",
+neighborName = "TPMU81F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81F",
+neighborName = "SVDU81G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81G",
+neighborName = "TPMU81G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H6-1
+hostname = "SVDU81G",
+neighborName = "SVDU82D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82D",
+neighborName = "TPMU82D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82D",
+neighborName = "SVDU82E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82E",
+neighborName = "TPMU82E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82E",
+neighborName = "SVDU82F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82F",
+neighborName = "TPMU82F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82F",
+neighborName = "SVDU82G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82G",
+neighborName = "TPMU82G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H7-1
+hostname = "SVDU82G",
+neighborName = "SVDU83D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83D",
+neighborName = "TPMU83D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83D",
+neighborName = "SVDU83E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83E",
+neighborName = "TPMU83E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83E",
+neighborName = "SVDU83F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83F",
+neighborName = "TPMU83F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83F",
+neighborName = "SVDU83G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83G",
+neighborName = "TPMU83G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H8-2
+hostname = "SVDU83G",
+neighborName = "SVDU78G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU78G",
+neighborName = "TPMU78G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78G",
+neighborName = "SVDU78F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78F",
+neighborName = "TPMU78F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78F",
+neighborName = "SVDU78E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78E",
+neighborName = "TPMU78E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78E",
+neighborName = "SVDU78D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78D",
+neighborName = "TPMU78D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H9-3
+hostname = "SVDU78G",
+neighborName = "SVDU77G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU77G",
+neighborName = "TPMU77G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78F",
+neighborName = "SVDU77F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU77F",
+neighborName = "TPMU77F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78E",
+neighborName = "SVDU77E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU77E",
+neighborName = "TPMU77E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78D",
+neighborName = "SVDU77D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU77D",
+neighborName = "TPMU77D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H10-2
+hostname = "SVDU78D",
+neighborName = "SVDU79G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79G",
+neighborName = "TPMU79G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79G",
+neighborName = "SVDU79F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79F",
+neighborName = "TPMU79F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79F",
+neighborName = "SVDU79E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79E",
+neighborName = "TPMU79E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79E",
+neighborName = "SVDU79D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79D",
+neighborName = "TPMU79D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: H11-4
+hostname = "SVDU79D",
+neighborName = "SVDU679M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: H12-2
+hostname = "SVDU79D",
+neighborName = "SVDU80G",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80G",
+neighborName = "TPMU80G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80G",
+neighborName = "SVDU80F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80F",
+neighborName = "TPMU80F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80F",
+neighborName = "SVDU80E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80E",
+neighborName = "TPMU80E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80E",
+neighborName = "SVDU80D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80D",
+neighborName = "TPMU80D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG6",
+neighborName = "SVDU80D",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# End of loop H
+#
+
+#
+# Beginning of loop I ############################################
+#
+# AVANT LoopID I1-1
+hostname = "ADBG5",
+neighborName = "SVDU71H",
+hostPortId = 3,
+neighborPortId = 4;
+
+hostname = "SVDU71H",
+neighborName = "TPMU71H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71H",
+neighborName = "SVDU71J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71J",
+neighborName = "TPMU71J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU71J",
+neighborName = "SVDU71K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU71K",
+neighborName = "TPMU71K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I2-2
+hostname = "SVDU71K",
+neighborName = "SVDU73K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU73K",
+neighborName = "TPMU73K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73K",
+neighborName = "SVDU73J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73J",
+neighborName = "TPMU73J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU73J",
+neighborName = "SVDU73H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU73H",
+neighborName = "TPMU73H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I3-2
+hostname = "SVDU73H",
+neighborName = "SVDU72K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72K",
+neighborName = "TPMU72K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72K",
+neighborName = "SVDU72J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72J",
+neighborName = "TPMU72J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU72J",
+neighborName = "SVDU72H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU72H",
+neighborName = "TPMU72H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I4-1
+hostname = "SVDU72H",
+neighborName = "SVDU81H",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU81H",
+neighborName = "TPMU81H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81H",
+neighborName = "SVDU81J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81J",
+neighborName = "TPMU81J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU81J",
+neighborName = "SVDU81K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU81K",
+neighborName = "TPMU81K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I5-1
+hostname = "SVDU81K",
+neighborName = "SVDU82H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82H",
+neighborName = "TPMU82H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82H",
+neighborName = "SVDU82J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82J",
+neighborName = "TPMU82J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU82J",
+neighborName = "SVDU82K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU82K",
+neighborName = "TPMU82K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I6-1
+hostname = "SVDU82K",
+neighborName = "SVDU83H",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83H",
+neighborName = "TPMU83H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83H",
+neighborName = "SVDU83J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83J",
+neighborName = "TPMU83J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU83J",
+neighborName = "SVDU83K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU83K",
+neighborName = "TPMU83K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I7-2
+hostname = "SVDU83K",
+neighborName = "SVDU76K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU76K",
+neighborName = "TPMU76K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76K",
+neighborName = "SVDU76J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU76J",
+neighborName = "TPMU76J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76J",
+neighborName = "SVDU76H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU76H",
+neighborName = "TPMU76H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I8-3
+hostname = "SVDU76K",
+neighborName = "SVDU75K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75K",
+neighborName = "TPMU75K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76J",
+neighborName = "SVDU75J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75J",
+neighborName = "TPMU75J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU76H",
+neighborName = "SVDU75H",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU75H",
+neighborName = "TPMU75H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I9-2
+hostname = "SVDU76H",
+neighborName = "SVDU77K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77K",
+neighborName = "TPMU77K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU77K",
+neighborName = "SVDU77J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77J",
+neighborName = "TPMU77J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU77J",
+neighborName = "SVDU77H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU77H",
+neighborName = "TPMU77H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I10-2
+hostname = "SVDU77H",
+neighborName = "SVDU78K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78K",
+neighborName = "TPMU78K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78K",
+neighborName = "SVDU78J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78J",
+neighborName = "TPMU78J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU78J",
+neighborName = "SVDU78H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU78H",
+neighborName = "TPMU78H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I11-2
+hostname = "SVDU78H",
+neighborName = "SVDU79K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79K",
+neighborName = "TPMU79K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79K",
+neighborName = "SVDU79J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79J",
+neighborName = "TPMU79J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU79J",
+neighborName = "SVDU79H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU79H",
+neighborName = "TPMU79H",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: I12-2
+hostname = "SVDU79H",
+neighborName = "SVDU80K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80K",
+neighborName = "TPMU80K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80K",
+neighborName = "SVDU80J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80J",
+neighborName = "TPMU80J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU80J",
+neighborName = "SVDU80H",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU80H",
+neighborName = "TPMU80H",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG6",
+neighborName = "SVDU80H",
+hostPortId = 3,
+neighborPortId = 4;
+
+#
+# End of loop I
+#
+
+#
+# Beginning of loop J ############################################
+#
+# AVANT LoopID J1-1
+hostname = "ADBG11",
+neighborName = "SVDU31A",
+hostPortId = 6,
+neighborPortId = 4;
+
+hostname = "SVDU31A",
+neighborName = "TPMU31A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31A",
+neighborName = "SVDU31B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31B",
+neighborName = "TPMU31B",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: J2-3
+hostname = "SVDU31A",
+neighborName = "SVDU30A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30A",
+neighborName = "TPMU30A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31B",
+neighborName = "SVDU30B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30B",
+neighborName = "TPMU30B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU31B",
+hostPortId = 7,
+neighborPortId = 5;
+
+#
+# End of loop J
+#
+
+#
+# Beginning of loop K ############################################
+#
+# AVANT LoopID K1-2
+hostname = "ADBG9",
+neighborName = "SVDU17A",
+hostPortId = 6,
+neighborPortId = 5;
+
+hostname = "SVDU17A",
+neighborName = "TPMU17A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K2-2
+hostname = "SVDU17A",
+neighborName = "SVDU18A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU18A",
+neighborName = "TPMU18A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K3-2
+hostname = "SVDU18A",
+neighborName = "SVDU19A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU19A",
+neighborName = "TPMU19A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K4-2
+hostname = "SVDU19A",
+neighborName = "SVDU20A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU20A",
+neighborName = "TPMU20A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K5-2
+hostname = "SVDU20A",
+neighborName = "SVDU21A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU21A",
+neighborName = "TPMU21A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K6-2
+hostname = "SVDU21A",
+neighborName = "SVDU22A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU22A",
+neighborName = "TPMU22A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K7-1
+hostname = "SVDU22A",
+neighborName = "SVDU27A",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU27A",
+neighborName = "TPMU27A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU27A",
+neighborName = "SVDU27B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU27B",
+neighborName = "TPMU27B",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K8-4
+hostname = "SVDU27A",
+neighborName = "SVDU627L",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: K9-1
+hostname = "SVDU27B",
+neighborName = "SVDU28A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28A",
+neighborName = "TPMU28A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU28A",
+neighborName = "SVDU28B",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28B",
+neighborName = "TPMU28B",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K10-2
+hostname = "SVDU28B",
+neighborName = "SVDU26B",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU26B",
+neighborName = "TPMU26B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26B",
+neighborName = "SVDU26A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU26A",
+neighborName = "TPMU26A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: K11-3
+hostname = "SVDU26B",
+neighborName = "SVDU25B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25B",
+neighborName = "TPMU25B",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26A",
+neighborName = "SVDU25A",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25A",
+neighborName = "TPMU25A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU26A",
+hostPortId = 6,
+neighborPortId = 4;
+
+#
+# End of loop K
+#
+
+#
+# Beginning of loop L ############################################
+#
+# AVANT LoopID L1-2
+hostname = "ADBG9",
+neighborName = "SVDU18E",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU18E",
+neighborName = "TPMU18E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L2-1
+hostname = "SVDU18E",
+neighborName = "SVDU17E",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU17E",
+neighborName = "TPMU17E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L3-2
+hostname = "SVDU17E",
+neighborName = "SVDU17F",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU17F",
+neighborName = "TPMU17F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L4-1
+hostname = "SVDU17F",
+neighborName = "SVDU18F",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU18F",
+neighborName = "TPMU18F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L5-1
+hostname = "SVDU18F",
+neighborName = "SVDU19F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU19F",
+neighborName = "TPMU19F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L6-1
+hostname = "SVDU19F",
+neighborName = "SVDU20F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU20F",
+neighborName = "TPMU20F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L7-1
+hostname = "SVDU20F",
+neighborName = "SVDU21F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU21F",
+neighborName = "TPMU21F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L8-1
+hostname = "SVDU21F",
+neighborName = "SVDU22F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU22F",
+neighborName = "TPMU22F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L9-2
+hostname = "SVDU22F",
+neighborName = "SVDU22E",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU22E",
+neighborName = "TPMU22E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L10-2
+hostname = "SVDU22E",
+neighborName = "SVDU21E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU21E",
+neighborName = "TPMU21E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L11-2
+hostname = "SVDU21E",
+neighborName = "SVDU20E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU20E",
+neighborName = "TPMU20E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L12-2
+hostname = "SVDU20E",
+neighborName = "SVDU19E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU19E",
+neighborName = "TPMU19E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L13-1
+hostname = "SVDU19E",
+neighborName = "SVDU27D",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU27D",
+neighborName = "TPMU27D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU27D",
+neighborName = "SVDU27E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU27E",
+neighborName = "TPMU27E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU27E",
+neighborName = "SVDU27F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU27F",
+neighborName = "TPMU27F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU27F",
+neighborName = "SVDU27G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU27G",
+neighborName = "TPMU27G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L14-4
+hostname = "SVDU27D",
+neighborName = "SVDU627M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: L15-1
+hostname = "SVDU27G",
+neighborName = "SVDU28D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28D",
+neighborName = "TPMU28D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU28D",
+neighborName = "SVDU28E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28E",
+neighborName = "TPMU28E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU28E",
+neighborName = "SVDU28F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28F",
+neighborName = "TPMU28F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU28F",
+neighborName = "SVDU28G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28G",
+neighborName = "TPMU28G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L16-1
+hostname = "SVDU28G",
+neighborName = "SVDU29D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU29D",
+neighborName = "TPMU29D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU29D",
+neighborName = "SVDU29E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU29E",
+neighborName = "TPMU29E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU29E",
+neighborName = "SVDU29F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU29F",
+neighborName = "TPMU29F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU29F",
+neighborName = "SVDU29G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU29G",
+neighborName = "TPMU29G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L17-2
+hostname = "SVDU29G",
+neighborName = "SVDU26G",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU26G",
+neighborName = "TPMU26G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26G",
+neighborName = "SVDU26F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU26F",
+neighborName = "TPMU26F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26F",
+neighborName = "SVDU26E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU26E",
+neighborName = "TPMU26E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26E",
+neighborName = "SVDU26D",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU26D",
+neighborName = "TPMU26D",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: L18-3
+hostname = "SVDU26G",
+neighborName = "SVDU25G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25G",
+neighborName = "TPMU25G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26F",
+neighborName = "SVDU25F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25F",
+neighborName = "TPMU25F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26E",
+neighborName = "SVDU25E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25E",
+neighborName = "TPMU25E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26D",
+neighborName = "SVDU25D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25D",
+neighborName = "TPMU25D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU26D",
+hostPortId = 5,
+neighborPortId = 4;
+
+#
+# End of loop L
+#
+
+#
+# Beginning of loop M ############################################
+#
+# AVANT LoopID M1-2
+hostname = "ADBG9",
+neighborName = "SVDU17K",
+hostPortId = 3,
+neighborPortId = 5;
+
+hostname = "SVDU17K",
+neighborName = "TPMU17K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M2-2
+hostname = "SVDU17K",
+neighborName = "SVDU18K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU18K",
+neighborName = "TPMU18K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M3-2
+hostname = "SVDU18K",
+neighborName = "SVDU19K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU19K",
+neighborName = "TPMU19K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M4-2
+hostname = "SVDU19K",
+neighborName = "SVDU20K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU20K",
+neighborName = "TPMU20K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M5-2
+hostname = "SVDU20K",
+neighborName = "SVDU21K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU21K",
+neighborName = "TPMU21K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M6-2
+hostname = "SVDU21K",
+neighborName = "SVDU22K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU22K",
+neighborName = "TPMU22K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M7-1
+hostname = "SVDU22K",
+neighborName = "SVDU27J",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU27J",
+neighborName = "TPMU27J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU27J",
+neighborName = "SVDU27K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU27K",
+neighborName = "TPMU27K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M8-4
+hostname = "SVDU27J",
+neighborName = "SVDU627R",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: M9-1
+hostname = "SVDU27K",
+neighborName = "SVDU28J",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28J",
+neighborName = "TPMU28J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU28J",
+neighborName = "SVDU28K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU28K",
+neighborName = "TPMU28K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M10-2
+hostname = "SVDU28K",
+neighborName = "SVDU26K",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU26K",
+neighborName = "TPMU26K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26K",
+neighborName = "SVDU26J",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU26J",
+neighborName = "TPMU26J",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: M11-3
+hostname = "SVDU26K",
+neighborName = "SVDU25K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25K",
+neighborName = "TPMU25K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU26J",
+neighborName = "SVDU25J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU25J",
+neighborName = "TPMU25J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU26J",
+hostPortId = 3,
+neighborPortId = 4;
+
+#
+# End of loop M
+#
+
+#
+# Beginning of loop N ############################################
+#
+# AVANT LoopID N1-1
+hostname = "ADBG11",
+neighborName = "SVDU31J",
+hostPortId = 3,
+neighborPortId = 4;
+
+hostname = "SVDU31J",
+neighborName = "TPMU31J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31J",
+neighborName = "SVDU31K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31K",
+neighborName = "TPMU31K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: N2-3
+hostname = "SVDU31J",
+neighborName = "SVDU30J",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30J",
+neighborName = "TPMU30J",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31K",
+neighborName = "SVDU30K",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30K",
+neighborName = "TPMU30K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU31K",
+hostPortId = 9,
+neighborPortId = 5;
+
+#
+# End of loop N
+#
+
+#
+# Beginning of loop O ############################################
+#
+# AVANT LoopID O1-1
+hostname = "ADBG11",
+neighborName = "SVDU32D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU32D",
+neighborName = "TPMU32D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU32D",
+neighborName = "SVDU32E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU32E",
+neighborName = "TPMU32E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU32E",
+neighborName = "SVDU32F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU32F",
+neighborName = "TPMU32F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU32F",
+neighborName = "SVDU32G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU32G",
+neighborName = "TPMU32G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: O2-1
+hostname = "SVDU32G",
+neighborName = "SVDU31D",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31D",
+neighborName = "TPMU31D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31D",
+neighborName = "SVDU31E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31E",
+neighborName = "TPMU31E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31E",
+neighborName = "SVDU31F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31F",
+neighborName = "TPMU31F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31F",
+neighborName = "SVDU31G",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU31G",
+neighborName = "TPMU31G",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: O3-3
+hostname = "SVDU31D",
+neighborName = "SVDU30D",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30D",
+neighborName = "TPMU30D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31E",
+neighborName = "SVDU30E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30E",
+neighborName = "TPMU30E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31F",
+neighborName = "SVDU30F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30F",
+neighborName = "TPMU30F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "SVDU31G",
+neighborName = "SVDU30G",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU30G",
+neighborName = "TPMU30G",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG10",
+neighborName = "SVDU31G",
+hostPortId = 8,
+neighborPortId = 5;
+
+#
+# End of loop O
+#
+
+#
+# Beginning of loop P ############################################
+#
+# AVANT LoopID P1-2
+hostname = "ADBG7",
+neighborName = "SVDU2A",
+hostPortId = 6,
+neighborPortId = 5;
+
+hostname = "SVDU2A",
+neighborName = "TPMU2A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P2-2
+hostname = "SVDU2A",
+neighborName = "SVDU1A",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU1A",
+neighborName = "TPMU1A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P3-1
+hostname = "SVDU1A",
+neighborName = "SVDU16A",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU16A",
+neighborName = "TPMU16A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P4-1
+hostname = "SVDU16A",
+neighborName = "SVDU15A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU15A",
+neighborName = "TPMU15A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P5-1
+hostname = "SVDU15A",
+neighborName = "SVDU14A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU14A",
+neighborName = "TPMU14A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P6-1
+hostname = "SVDU14A",
+neighborName = "SVDU12A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU12A",
+neighborName = "TPMU12A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P7-1
+hostname = "SVDU12A",
+neighborName = "SVDU11A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU11A",
+neighborName = "TPMU11A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: P8-1
+hostname = "SVDU11A",
+neighborName = "SVDU10A",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU10A",
+neighborName = "TPMU10A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG8",
+neighborName = "SVDU10A",
+hostPortId = 6,
+neighborPortId = 5;
+
+#
+# End of loop P
+#
+
+#
+# Beginning of loop Q ############################################
+#
+# AVANT LoopID Q1-2
+hostname = "ADBG7",
+neighborName = "SVDU2E",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU2E",
+neighborName = "TPMU2E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q2-2
+hostname = "SVDU2E",
+neighborName = "SVDU1E",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU1E",
+neighborName = "TPMU1E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q3-1
+hostname = "SVDU1E",
+neighborName = "SVDU1F",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU1F",
+neighborName = "TPMU1F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q4-1
+hostname = "SVDU1F",
+neighborName = "SVDU2F",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU2F",
+neighborName = "TPMU2F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q5-1
+hostname = "SVDU2F",
+neighborName = "SVDU15E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU15E",
+neighborName = "TPMU15E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q6-1
+hostname = "SVDU15E",
+neighborName = "SVDU16E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU16E",
+neighborName = "TPMU16E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q7-2
+hostname = "SVDU16E",
+neighborName = "SVDU16F",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU16F",
+neighborName = "TPMU16F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q8-2
+hostname = "SVDU16F",
+neighborName = "SVDU15F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU15F",
+neighborName = "TPMU15F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q9-2
+hostname = "SVDU15F",
+neighborName = "SVDU14F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU14F",
+neighborName = "TPMU14F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q10-2
+hostname = "SVDU14F",
+neighborName = "SVDU12F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU12F",
+neighborName = "TPMU12F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q11-2
+hostname = "SVDU12F",
+neighborName = "SVDU11F",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU11F",
+neighborName = "TPMU11F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q12-1
+hostname = "SVDU11F",
+neighborName = "SVDU10F",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU10F",
+neighborName = "TPMU10F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q13-2
+hostname = "SVDU10F",
+neighborName = "SVDU10E",
+hostPortId = 5,
+neighborPortId = 5;
+
+hostname = "SVDU10E",
+neighborName = "TPMU10E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q14-1
+hostname = "SVDU10E",
+neighborName = "SVDU11E",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU11E",
+neighborName = "TPMU11E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q15-4
+hostname = "SVDU11E",
+neighborName = "SVDU611M",
+hostPortId = 3,
+neighborPortId = 4;
+
+# AVANT LoopID: Q16-1
+hostname = "SVDU11E",
+neighborName = "SVDU12E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU12E",
+neighborName = "TPMU12E",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: Q17-1
+hostname = "SVDU12E",
+neighborName = "SVDU14E",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU14E",
+neighborName = "TPMU14E",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG8",
+neighborName = "SVDU14E",
+hostPortId = 5,
+neighborPortId = 5;
+
+#
+# End of loop Q
+#
+
+#
+# Beginning of loop R ############################################
+#
+# AVANT LoopID R1-2
+hostname = "ADBG7",
+neighborName = "SVDU2K",
+hostPortId = 3,
+neighborPortId = 5;
+
+hostname = "SVDU2K",
+neighborName = "TPMU2K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R2-2
+hostname = "SVDU2K",
+neighborName = "SVDU1K",
+hostPortId = 4,
+neighborPortId = 5;
+
+hostname = "SVDU1K",
+neighborName = "TPMU1K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R3-1
+hostname = "SVDU1K",
+neighborName = "SVDU16K",
+hostPortId = 4,
+neighborPortId = 4;
+
+hostname = "SVDU16K",
+neighborName = "TPMU16K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R4-1
+hostname = "SVDU16K",
+neighborName = "SVDU15K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU15K",
+neighborName = "TPMU15K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R5-1
+hostname = "SVDU15K",
+neighborName = "SVDU14K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU14K",
+neighborName = "TPMU14K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R6-1
+hostname = "SVDU14K",
+neighborName = "SVDU12K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU12K",
+neighborName = "TPMU12K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R7-1
+hostname = "SVDU12K",
+neighborName = "SVDU11K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU11K",
+neighborName = "TPMU11K",
+hostPortId = 66,
+neighborPortId = 90;
+
+# AVANT LoopID: R8-1
+hostname = "SVDU11K",
+neighborName = "SVDU10K",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "SVDU10K",
+neighborName = "TPMU10K",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG8",
+neighborName = "SVDU10K",
+hostPortId = 3,
+neighborPortId = 5;
+
+#
+# End of loop R
+#
+

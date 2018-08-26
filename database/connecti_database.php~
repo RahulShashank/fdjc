@@ -1,0 +1,22 @@
+<?php
+	$username = "root";
+	$password = "root";
+//	$password = "";
+	$hostname = "localhost"; 
+	
+//	$hostname = "10.76.108.177";
+	$mainDB = "banalytics"; 
+
+	//connection to mysql Server
+	$dbConnection = mysqli_connect($hostname, $username, $password, $mainDB)
+	  or die("Unable to connect to MySQL");
+	
+	// Check connection
+	if (mysqli_connect_errno())
+	{
+		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	}
+	// Set autocommit to off
+	mysqli_autocommit($dbConnection,FALSE);
+	
+?>

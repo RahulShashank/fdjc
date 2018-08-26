@@ -1,0 +1,125 @@
+<?php
+require_once "../database/connecti_database.php";
+require_once "../common/computeFleetStatusData.php";
+require_once "../common/datesConfiguration.php";
+require_once "../common/fleetStatus.php";
+require_once("../common/validateUser.php");
+
+$approvedRoles = [$roles["admin"], $roles["engineer"]];
+$auth->checkPermission($hash, $approvedRoles);
+
+$airlineId = $_REQUEST['airlineId'];
+
+if(isset($airlineId)) {
+	// For Engineering
+	$query = "SELECT id, tailsign, noseNumber, type, msn, platform, software, databaseName, systemResetStatus, headEndStatus, firstClassStatus, businessClassStatus, economyClassStatus, connectivityStatus, status, lastStatusComputed, isp, Ac_Configuration, LF_RF, EIS,SW_PartNo,SW_installed, SW_Baseline, Map_Version, Content from aircrafts WHERE airlineId=? ORDER BY `tailsign` ASC";
+	$stmt = $dbConnection->prepare($query) ;
+	$stmt->bind_param("i", $airlineId);
+	$stmt->execute();
+	$stmt->bind_result($id, $tailsign, $noseNumber, $type, $msn, $platform, $software, $databaseName, $systemResetStatus, $headEndStatus, $firstClassStatus, $businessClassStatus, $economyClassStatus, $connectivityStatus, $status, $lastStatusComputed, $isp, $AC_config, $LF_RF, $EIS, $SW_PartNo, $SWinstalled, $SW_Baseline, $Map_Version, $Content);
+	// $result = mysqli_query($dbConnection, $query);
+
+	$aircrafts = array();
+	
+	$dateTimeThreshold = date_modify(new DateTime(), "- $fleetStatusPeriod day");
+	
+	while ($stmt->fetch()) {
+	
+		$lastStatusComputedDateTime = new DateTime( $lastStatusComputed );
+		if( $lastStatusComputedDateTime < $dateTimeThreshold ){
+			$systemResetStatus		=-1;
+			$headEndStatus			=-1;
+			$firstClassStatus		=-1;
+			$businessClassStatus	=-1;
+			$economyClassStatus		=-1;
+			$connectivityStatus		=-1;
+			$status					=-1;
+		}
+			
+		$nwstatus = getstatus($status);
+		if($SWinstalled == '0000-00-00'){
+			$newSWinstalled = '';
+		}
+		else{
+			$newSWinstalled = $SWinstalled;
+		}
+		
+		if($EIS == '0000-00-00'){
+			$newEIS = '';
+		}
+		else{
+			$newEIS = $EIS;
+		}
+		
+		
+		if($noseNumber==''){
+			$newtailsign = $tailsign;
+		}
+		else{
+			$newtailsign = $tailsign." (".$noseNumber.")";
+		}
+		
+		//$newtailsign = $tailsign;
+		
+		$aircrafts[] = array(
+			'id' 					=> $id, 
+			'tailsign' 				=> $tailsign, 
+			'newtailsign' 			=> "<a href=\"../engineering/aircraftDashboard.php?aircraftId=$id\">$newtailsign</a>", 
+			'type' 					=> $type, 
+			'msn' 					=> $msn, 
+			'platform' 				=> $platform, 
+			'software' 				=> $software,
+			'databaseName' 			=> $databaseName,
+			'systemResetStatus' 	=> $systemResetStatus,
+			'headEndStatus' 		=> $headEndStatus,
+			'firstClassStatus' 		=> $firstClassStatus,
+			'businessClassStatus' 	=> $businessClassStatus,
+			'economyClassStatus' 	=> $economyClassStatus,
+			'connectivityStatus' 	=> $connectivityStatus,
+			'status' 				=> $status,
+			'lastStatusComputed' 	=> $lastStatusComputed,
+			'isp' 					=> $isp,
+			'Ac_Configuration'		=> $AC_config,
+			'LF_RF'					=> $LF_RF,
+			'newEIS'				=> $newEIS,
+			'SW_PartNo'				=> $SW_PartNo,
+			'newSWinstalled'		=> $newSWinstalled,
+			'SW_Baseline'			=> $SW_Baseline,
+			'Map_Version'			=> $Map_Version,
+			'Content'				=> $Content,
+			'edit' 					=> "<a role=\"button\" data-toggle=\"modal\" data-target=\"#myModal\" data-tailsign=\"$tailsign\" data-software=\"$software\" data-swpartno=\"$SW_PartNo\" data-swinstalled=\"$newSWinstalled\" data-swbaseline=\"$SW_Baseline\" data-mapversion=\"$Map_Version\" data-content=\"$Content\" data-msn=\"$msn\"><span class='glyphicon glyphicon-edit'></span></a>",
+			'statusIcon'			=> "<img src=\"../img/$nwstatus.png\" style=\"vertical-align:middle\" height=\"16\" width=\"16\">"
+		);
+	}
+ 
+	$stmt->close();
+} else {
+	// For Admin
+	$query = "SELECT a.id, tailsign, type, msn, platform, software, name FROM aircrafts a, airlines b WHERE a.airlineId = b.id";
+	$stmt = $dbConnection->prepare($query) ;
+	$stmt->execute();
+	$stmt->bind_result($id, $tailsign, $type, $msn, $platform, $software, $name);
+	// $result = mysqli_query($dbConnection, $query);
+
+	$aircrafts = array();
+	while ($stmt->fetch()) {
+		$aircrafts[] = array(
+			'id' 		=> $id, 
+			'tailsign' 	=> $tailsign, 
+			'type' 		=> $type, 
+			'msn' 		=> $msn, 
+			'platform'	=> $platform, 
+			'software' 	=> $software,
+			'name' 		=> $name
+		);
+	}
+	// while ($row = mysqli_fetch_array($result)) {
+	// 	$aircrafts[] = $row;
+	// }
+}
+
+
+# JSON-encode the response
+echo $json_response = json_encode($aircrafts);
+
+?>

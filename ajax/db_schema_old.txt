@@ -1,0 +1,256 @@
+-- Table schema for XML to BITE database mapping
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Table structure for table `SYS_flight`
+--
+
+DROP TABLE IF EXISTS `SYS_flight`;
+CREATE TABLE IF NOT EXISTS `SYS_flight` (
+  `idFlightLeg` int(11) NOT NULL auto_increment COMMENT 'primary key ',
+  `flightLeg` varchar(13) NOT NULL COMMENT 'Flight leg',
+  `flightNumber` varchar(255) NOT NULL COMMENT 'Flight number',
+  `departureAirportCode` varchar(255) NOT NULL COMMENT 'Departure airport code',
+  `arrivalAirportCode` varchar(255) NOT NULL COMMENT 'Arrival airport code',
+  `aircraftTailSign` varchar(255) NOT NULL COMMENT 'Tail Sign',
+  `aircraftType` varchar(255) NOT NULL COMMENT 'Aircraft Type',
+  `createDate` datetime NOT NULL COMMENT 'Flight record time',
+  `idOffload` int(11) NOT NULL COMMENT 'Not used',
+  `lastUpdate` datetime NOT NULL COMMENT 'Time of the last record update',
+  `analyzed` BOOLEAN NULL DEFAULT FALSE ,
+  `analysis` VARCHAR(500) NULL DEFAULT '',
+   PRIMARY KEY  (`idFlightLeg`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains flight leg data' AUTO_INCREMENT=1;
+
+--
+-- Table structure for table `SYS_flightPhase`
+--
+
+DROP TABLE IF EXISTS `SYS_flightPhase`;
+CREATE TABLE IF NOT EXISTS `SYS_flightPhase` (
+  `id` int(11) NOT NULL auto_increment COMMENT 'primary key',
+  `idFlightPhase` int(11) NOT NULL COMMENT 'part of the primary key',
+  `startTime` datetime NOT NULL COMMENT 'flight phase start time',
+  `endTime` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'flight phase end time',
+  `idFlightLeg` int(11) NOT NULL COMMENT 'associated flight leg',
+  `lastUpdate` datetime NOT NULL COMMENT 'Time of the last record update',
+   PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Contains flight phase state data for each flight leg' AUTO_INCREMENT=1 ;
+
+--
+-- Table structure for table `BIT_lru`
+--
+
+DROP TABLE IF EXISTS `BIT_lru`;
+CREATE TABLE `BIT_lru` (
+  `idLru` int(11) NOT NULL auto_increment COMMENT 'primary key ',
+  `hostName` varchar(25) NOT NULL COMMENT 'LRU hostName',
+  `lruType` int(11) NOT NULL COMMENT 'LRU type',
+  `lruSubType` int(11) NOT NULL COMMENT 'LRU sub type',
+  `hwPartNumber` varchar(12) NOT NULL COMMENT 'LRU hardware part number',
+  `serialNumber` varchar(8) NOT NULL COMMENT 'LRU serial number',
+  `macAddress` varchar(17) NOT NULL COMMENT 'LRU mac address',
+  `ipAddress` varchar(15) NOT NULL COMMENT 'LRU ip address',
+  `model` varchar(12) NOT NULL COMMENT 'LRU model',
+  `revision` varchar(2) NOT NULL COMMENT 'LRU revision',
+  `totalPowerOnTime` int(11) NOT NULL COMMENT 'LRU total power on time',
+  `totalRebootNumber` int(11) NOT NULL COMMENT 'LRU total number of reboot',
+  `cmdRebootNumber` int(11) NOT NULL COMMENT 'LRU number of commanded reboot',
+  `idStaticConfLru` int(11) NOT NULL COMMENT 'link to the sys_staticConfLru table',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  `idFlightLeg` int(11) NOT NULL,
+  PRIMARY KEY  (hostName,serialNumber),
+  KEY `idLru` (`idLru`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COMMENT='lists all the LRU description received via SNMP HB';
+
+
+--
+-- Table structure for table `BIT_confSw`
+--
+
+DROP TABLE IF EXISTS `BIT_confSw`;
+CREATE TABLE IF NOT EXISTS `BIT_confSw` (
+`idConfSw` int(11) NOT NULL auto_increment COMMENT 'primary key ',
+  `hostName` varchar(50) NOT NULL COMMENT 'hostName of the LRU',
+  `description` varchar(50) NOT NULL COMMENT 'description of the PN',
+  `partNumber` varchar(50) NOT NULL COMMENT 'part number of the lru',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  `idFlightLeg` int(11) NOT NULL,
+  PRIMARY KEY (hostName,partNumber),
+  KEY `idConfSw` (`idConfSw`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Lists all the sw pn' AUTO_INCREMENT=1 ;
+
+--
+-- Table structure for table `BIT_events`
+--
+
+DROP TABLE IF EXISTS `BIT_events`;
+CREATE TABLE IF NOT EXISTS `BIT_events` (
+`idEvent` int(11) NOT NULL auto_increment COMMENT 'primary key ',
+  `eventName` varchar(50) NOT NULL COMMENT 'Name of the service',
+  `eventType` varchar(50) NOT NULL COMMENT 'Type of the service',
+  `eventData` varchar(50) NOT NULL COMMENT 'Data of the service',
+  `eventStatus` varchar(50) NOT NULL COMMENT 'status of the service',
+  `eventCount` int(11) NOT NULL COMMENT 'Event occurence per flight leg',
+  `idFlightLeg` int(11) NOT NULL COMMENT 'flight leg ID',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  PRIMARY KEY  (`idEvent`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Lists all the events' AUTO_INCREMENT=1 ;
+
+
+--
+-- Table structure for table `BIT_failure`
+--
+
+DROP TABLE IF EXISTS `BIT_failure`;
+CREATE TABLE `BIT_failure` (
+  `idFailure` int(11) NOT NULL auto_increment COMMENT 'primary key ',
+  `idFlightLeg` int(11) NOT NULL COMMENT 'link to the SYS_flight table',
+  `failureCode` bigint(20) NOT NULL COMMENT 'failure code',
+  `param1` int(11) NOT NULL COMMENT 'parameter 1 of the fault',
+  `probability` int(11) NOT NULL COMMENT 'failure probability',
+  `correlationDate` datetime NOT NULL COMMENT 'correlation time',
+  `monitorState` int(11) NOT NULL COMMENT 'fault state (ex: clear = 1 set = 3)',
+  `accusedHostName` varchar(25) NOT NULL COMMENT 'accused LRU hostName',
+  `isAmsSent` int(11) NOT NULL COMMENT 'sent to the AMS flag',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  `logAction` int(11) NOT NULL COMMENT 'the action selected',
+  `logActionTime` datetime NOT NULL default '0000-00-00 00:00:00' COMMENT 'the time when action was selected',
+  `legFailureCount` int(11) NOT NULL COMMENT 'total number of failure occurences',
+  PRIMARY KEY  (`idFailure`),
+  UNIQUE KEY `idFlightLeg` (`idFlightLeg`,`failureCode`,`param1`,`accusedHostName`),
+  KEY `keyBIT_failure` (`monitorState`,`idFlightLeg`),
+  KEY `bit_failure_index03` (`idFlightLeg`,`accusedHostName`,`monitorState`,`failureCode`),
+  KEY `bit_failure_index01` (`accusedHostName`,`failureCode`),
+  KEY `bit_failure_index02` (`idFlightLeg`,`accusedHostName`,`failureCode`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COMMENT='lists all the failures declared from faults';
+
+--
+-- Table structure for table `BIT_fault`
+--
+
+DROP TABLE IF EXISTS `BIT_fault`;
+CREATE TABLE `BIT_fault` (
+  `idFault` int(11) NOT NULL auto_increment COMMENT 'primary key',
+  `hostName` varchar(25) NOT NULL COMMENT 'hostName of the faulted LRU',
+  `reportingHostName` varchar(25) NOT NULL COMMENT 'hostName of the reporting LRU',
+  `param1` int(11) NOT NULL COMMENT 'parameter 1 of the fault',
+  `param2` int(11) NOT NULL COMMENT 'parameter 2 of the fault',
+  `param3` int(11) NOT NULL COMMENT 'parameter 3 of the fault',
+  `param4` int(11) NOT NULL COMMENT 'parameter 4 of the fault',
+  `detectionTime` datetime NOT NULL COMMENT 'time of the fault detection',
+  `faultCode` int(11) NOT NULL COMMENT 'fault code',
+  `monitorState` int(11) NOT NULL COMMENT 'fault state (ex: clear = 1 set = 3)',
+  `inhibited` int(11) NOT NULL COMMENT 'Set to 1 if the fault is inhibited by an external cause (power or ethernet loss)',
+  `faultStatus` int(11) NOT NULL COMMENT 'fault status (opened = 1; closed = 0)',
+  `insertionTime` datetime NOT NULL COMMENT 'time of the fault insertion',
+  `clearingTime` datetime NOT NULL COMMENT 'time of the fault insertion',
+  `idFlightLeg` int(11) NOT NULL COMMENT 'link to the SYS_flight table',
+  `idFailure` int(11) NOT NULL COMMENT 'Equal to 1 if the fault is new and not correlated yet,\nEqual to 0 if the fault is cleared;Otherwise,\nequal to <idFailure> once correlated.',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  PRIMARY KEY  (`idFault`),
+  KEY `keyBIT_fault1` (`idFlightLeg`,`monitorState`,`faultCode`),
+  KEY `keyBIT_fault2` (`idFailure`,`monitorState`),
+  KEY `keyBIT_fault3` (`hostName`,`reportingHostName`,`param1`,`faultCode`,`monitorState`),
+  KEY `keyBIT_fault4` (`hostName`,`faultCode`),
+  KEY `keyBIT_fault5` (`reportingHostName`,`faultCode`),
+  KEY `keyBIT_fault6` (`hostName`),
+  KEY `keyBIT_fault7` (`idFailure`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COMMENT='Lists all the last 64 flight leg LRU not filtered faults';
+
+
+--
+-- Table structure for table `BIT_extAppEvent`
+--
+
+DROP TABLE IF EXISTS `BIT_extAppEvent`;
+CREATE TABLE IF NOT EXISTS `BIT_extAppEvent` (
+`idExtAppEvent` int(11) NOT NULL auto_increment COMMENT 'primary key',
+  `hostName` varchar(25) NOT NULL COMMENT 'hostName of the faulted LRU',
+  `reportingHostName` varchar(25) NOT NULL COMMENT 'hostName of the reporting LRU',
+  `faultCode` int(11) NOT NULL COMMENT 'fault code',
+  `param1` varchar(255) NOT NULL COMMENT 'additional parameter',
+  `param2` varchar(255) NOT NULL COMMENT 'additional parameter',
+  `param3` varchar(255) NOT NULL COMMENT 'additional parameter',
+  `param4` varchar(255) NOT NULL COMMENT 'additional parameter',
+  `detectionTime` datetime NOT NULL COMMENT 'time of the event detection',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the event insertion',
+  `idFlightLeg` int(11) NOT NULL COMMENT 'link to the SYS_flight table',
+    PRIMARY KEY  (`idExtAppEvent`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='List of the external application events that occured' AUTO_INCREMENT=1;
+
+
+--
+-- Table structure for table `BIT_removedLru`
+--
+
+DROP TABLE IF EXISTS `BIT_removedLru`;
+CREATE TABLE IF NOT EXISTS `BIT_removedLru` (
+`idLru` int(11) NOT NULL auto_increment COMMENT 'primary key',
+  `hostName` varchar(25) NOT NULL COMMENT 'LRU former hostName',
+  `lruType` int(11) NOT NULL COMMENT 'LRU type',
+  `lruSubType` int(11) NOT NULL COMMENT 'LRU sub type',
+  `hwPartNumber` varchar(12) NOT NULL COMMENT 'LRU hardware part number',
+  `serialNumber` varchar(8) NOT NULL COMMENT 'LRU serial number',
+  `macAddress` varchar(17) NOT NULL COMMENT 'LRU mac address',
+  `ipAddress` varchar(15) NOT NULL COMMENT 'LRU ip address',
+  `model` varchar(12) NOT NULL COMMENT 'LRU model',
+  `revision` varchar(2) NOT NULL COMMENT 'LRU revision',
+  `totalPowerOnTime` int(11) NOT NULL COMMENT 'LRU total power on time',
+  `totalRebootNumber` int(11) NOT NULL COMMENT 'LRU total number of reboot',
+  `cmdRebootNumber` int(11) NOT NULL COMMENT 'LRU number of commanded reboot',
+  `idStaticConfLru` int(11) NOT NULL COMMENT 'link to the sys_staticConfLru table',
+  `lastUpdate` datetime NOT NULL COMMENT 'time of the last record update',
+  `removalDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT 'time of removal from system',
+  `idFlightLeg` int(11) NOT NULL,
+  PRIMARY KEY  (`idLru`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='Lists all the LRU that have been removed' AUTO_INCREMENT=1;
+
+
+--
+-- Table structure for table `offloads`
+--
+
+DROP TABLE IF EXISTS `offloads`;
+CREATE TABLE IF NOT EXISTS `offloads` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primay key',
+  `name` varchar(50) NOT NULL,
+  `offloadDate` datetime NOT NULL,
+  `idFlightLeg` int(11) ,
+  `idEventFlightLeg` int(11) ,
+   PRIMARY KEY  (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+--
+-- Table structure for table `service_events`
+--
+
+DROP TABLE IF EXISTS `services_events`;
+CREATE TABLE IF NOT EXISTS `services_events` (
+  `id` int(11) NOT NULL auto_increment COMMENT 'primary key',
+  `eventName` varchar(255) NOT NULL COMMENT 'Event name',
+  `eventTime` datetime NOT NULL COMMENT 'Time of event',
+  `eventSource` varchar(255) NOT NULL COMMENT 'Event source',
+  `param1` varchar(255) COMMENT 'param 1',
+  `param2` varchar(255) COMMENT 'param 2',
+  `param3` varchar(255) COMMENT 'param 3',
+  `idEventFlightLeg` int(11) NOT NULL,
+   PRIMARY KEY  (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
+
+--
+-- Table structure for table `flightstatus`
+--
+DROP TABLE IF EXISTS `flightstatus`;
+CREATE TABLE IF NOT EXISTS `flightstatus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idFlightLeg` int(11) NOT NULL,
+  `systemResetStatus` tinyint(4) NOT NULL,
+  `headEndStatus` tinyint(4) NOT NULL,
+  `firstClassStatus` tinyint(4) NOT NULL,
+  `businessClassStatus` tinyint(4) NOT NULL,
+  `economyClassStatus` tinyint(4) NOT NULL,
+  `connectivityStatus` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=48 ;

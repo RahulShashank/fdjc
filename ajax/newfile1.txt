@@ -1,0 +1,2 @@
+INSERT INTO lru_table (partNumber, name, lruType, lruTypeId)
+						  VALUES ('183501-402','SVDU417S-402','SVDU417S', 22)

@@ -1,0 +1,1053 @@
+#####################################################################
+#  Copyright (C) 2006-2007 Thales Avionics-InFlight Systems LLC, Irvine, CA
+#
+#  File : neighborlink.dat - Topology Discovery input file
+#  NOTE : The following convention is used 
+#        PortID is 1 based
+#        DSU-D2 - The host name DSU-D2-<unit-id>-1 is used.
+#                 Interface number will be from 1 to 4 for portID.
+#
+#        SVDU   - The PortID is always 1 from SVDU to QSEB for Gen2 SVDUs and ICMTs.
+#                 The PortID is always 2 from SVDU to QSEB for Gen3 SVDUs and ICMTs.
+#                 The PortID from QSEB to SVDU is switch port
+#                 on QSEB to the SVDU.
+#                 For example: QSEB40DEFG - SVDU41D is port 2
+#                                           SVDU41E is port 3
+#                                           SVDU41F is port 4
+#                                           SVDU41G is port 5
+#
+#        TPCU   - The Port ID is always 90 from SVDU to QSEB.
+#                 The PortID from QSEB to SVDU is 66, 67, 68, 69 for 
+#                 seat position of the TPCU within the QSEB.
+#                 For example: QSEB40DEFG - TPCU40D is port 66
+#                                           TPCU40E is port 67
+#                                           TPCU40F is port 68
+#                                            TPCU40G is port 69
+######################################################################
+#=======================================================================
+# Headend and distribution neighborlinks
+#=======================================================================
+hostname = "AVCDM1",
+neighborName = "ADBG1",
+hostPortId = 3,
+neighborPortId = 9;
+
+hostname = "AVCDM1",
+neighborName = "ADBG2",
+hostPortId = 4,
+neighborPortId = 9;
+
+hostname = "DSU1",
+neighborName = "AVCDM1",
+hostPortId = 3,
+neighborPortId = 5;
+
+hostname = "DSU1",
+neighborName = "QSEBVCC",
+hostPortId = 2,
+neighborPortId = 11;
+
+hostname = "DSU1",
+neighborName = "ADBG1",
+hostPortId = 7,
+neighborPortId = 7;
+
+hostname = "DSU1",
+neighborName = "DSU2",
+hostPortId = 5,
+neighborPortId = 4;
+
+hostname = "DSU2",
+neighborName = "AVCDM1",
+hostPortId = 3,
+neighborPortId = 6;
+
+hostname = "DSU2",
+neighborName = "ADBG2",
+hostPortId = 7,
+neighborPortId = 7;
+
+#=======================================================================
+# Seatend neighborlinks
+#=======================================================================
+#
+# Beginning of non-looped column ############################################
+#
+
+hostname = "QSEBVCC",
+neighborName = "ICMT1",
+hostPortId = 2,
+neighborPortId = 2;
+
+#
+# Beginning of loop A ############################################
+#
+# QSEB LoopID A1-1
+hostname = "ADBG1",
+neighborName = "QSEB2A",
+hostPortId = 6,
+neighborPortId = 11;
+
+hostname = "QSEB2A",
+neighborName = "SVDU2A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU2A",
+neighborName = "TPMU2A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: A2-1
+hostname = "QSEB2A",
+neighborName = "QSEB3A",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB3A",
+neighborName = "SVDU3A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU3A",
+neighborName = "TPMU3A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: A3-1
+hostname = "QSEB3A",
+neighborName = "QSEB4A",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB4A",
+neighborName = "SVDU4A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU4A",
+neighborName = "TPMU4A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: A4-1
+hostname = "QSEB4A",
+neighborName = "QSEB5A",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB5A",
+neighborName = "SVDU5A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU5A",
+neighborName = "TPMU5A",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: A5-2
+hostname = "QSEB5A",
+neighborName = "QSEB1A",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB1A",
+neighborName = "SVDU1A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU1A",
+neighborName = "TPMU1A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG2",
+neighborName = "QSEB1A",
+hostPortId = 6,
+neighborPortId = 11;
+
+#
+# End of loop A
+#
+
+#
+# Beginning of loop B ############################################
+#
+# QSEB LoopID B1-1
+hostname = "ADBG1",
+neighborName = "QSEB1F",
+hostPortId = 4,
+neighborPortId = 11;
+
+hostname = "QSEB1F",
+neighborName = "SVDU1F",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU1F",
+neighborName = "TPMU1F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: B2-2
+hostname = "QSEB1F",
+neighborName = "QSEB5F",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB5F",
+neighborName = "SVDU5F",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU5F",
+neighborName = "TPMU5F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: B3-2
+hostname = "QSEB5F",
+neighborName = "QSEB4F",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB4F",
+neighborName = "SVDU4F",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU4F",
+neighborName = "TPMU4F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: B4-2
+hostname = "QSEB4F",
+neighborName = "QSEB3F",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB3F",
+neighborName = "SVDU3F",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU3F",
+neighborName = "TPMU3F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: B5-2
+hostname = "QSEB3F",
+neighborName = "QSEB2F",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB2F",
+neighborName = "SVDU2F",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU2F",
+neighborName = "TPMU2F",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "ADBG2",
+neighborName = "QSEB2F",
+hostPortId = 4,
+neighborPortId = 11;
+
+#
+# End of loop B
+#
+
+#
+# Beginning of loop C ############################################
+#
+# QSEB LoopID C1-1
+hostname = "ADBG1",
+neighborName = "QSEB10AC",
+hostPortId = 5,
+neighborPortId = 11;
+
+hostname = "QSEB10AC",
+neighborName = "SVDU10A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU10A",
+neighborName = "TPMU10A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB10AC",
+neighborName = "SVDU10C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU10C",
+neighborName = "TPMU10C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: C2-1
+hostname = "QSEB10AC",
+neighborName = "QSEB9AC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB9AC",
+neighborName = "SVDU9A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU9A",
+neighborName = "TPMU9A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB9AC",
+neighborName = "SVDU9C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU9C",
+neighborName = "TPMU9C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: C3-1
+hostname = "QSEB9AC",
+neighborName = "QSEB8AC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB8AC",
+neighborName = "SVDU8A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU8A",
+neighborName = "TPMU8A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB8AC",
+neighborName = "SVDU8C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU8C",
+neighborName = "TPMU8C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: C4-1
+hostname = "QSEB8AC",
+neighborName = "QSEB7AC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB7AC",
+neighborName = "SVDU7A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU7A",
+neighborName = "TPMU7A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB7AC",
+neighborName = "SVDU7C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU7C",
+neighborName = "TPMU7C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: C5-2
+hostname = "QSEB7AC",
+neighborName = "QSEB6AC",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB6AC",
+neighborName = "SVDU6A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU6A",
+neighborName = "TPMU6A",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB6AC",
+neighborName = "SVDU6C",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU6C",
+neighborName = "TPMU6C",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: C6-1
+hostname = "QSEB6AC",
+neighborName = "QSEB16ABC",
+hostPortId = 11,
+neighborPortId = 11;
+
+hostname = "QSEB16ABC",
+neighborName = "SVDU17A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB16ABC",
+neighborName = "SVDU17B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB16ABC",
+neighborName = "SVDU17C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C7-1
+hostname = "QSEB16ABC",
+neighborName = "QSEB15ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB15ABC",
+neighborName = "SVDU16A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB15ABC",
+neighborName = "SVDU16B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB15ABC",
+neighborName = "SVDU16C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C8-1
+hostname = "QSEB15ABC",
+neighborName = "QSEB14ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB14ABC",
+neighborName = "SVDU15A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB14ABC",
+neighborName = "SVDU15B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB14ABC",
+neighborName = "SVDU15C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C9-1
+hostname = "QSEB14ABC",
+neighborName = "QSEB13ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB13ABC",
+neighborName = "SVDU14A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB13ABC",
+neighborName = "SVDU14B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB13ABC",
+neighborName = "SVDU14C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C10-1
+hostname = "QSEB13ABC",
+neighborName = "QSEB12ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB12ABC",
+neighborName = "SVDU13A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB12ABC",
+neighborName = "SVDU13B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB12ABC",
+neighborName = "SVDU13C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C11-1
+hostname = "QSEB12ABC",
+neighborName = "QSEB11-ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB11-ABC",
+neighborName = "SVDU12A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB11-ABC",
+neighborName = "SVDU12B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB11-ABC",
+neighborName = "SVDU12C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C12-1
+hostname = "QSEB11-ABC",
+neighborName = "QSEB11ABC",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB11ABC",
+neighborName = "SVDU11A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB11ABC",
+neighborName = "SVDU11B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB11ABC",
+neighborName = "SVDU11C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C13-2
+hostname = "QSEB11ABC",
+neighborName = "QSEB21ABC",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB21ABC",
+neighborName = "SVDU22A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB21ABC",
+neighborName = "SVDU22B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB21ABC",
+neighborName = "SVDU22C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C14-2
+hostname = "QSEB21ABC",
+neighborName = "QSEB20ABC",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB20ABC",
+neighborName = "SVDU21A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB20ABC",
+neighborName = "SVDU21B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB20ABC",
+neighborName = "SVDU21C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C15-2
+hostname = "QSEB20ABC",
+neighborName = "QSEB19ABC",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB19ABC",
+neighborName = "SVDU20A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB19ABC",
+neighborName = "SVDU20B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB19ABC",
+neighborName = "SVDU20C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C16-2
+hostname = "QSEB19ABC",
+neighborName = "QSEB18ABC",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB18ABC",
+neighborName = "SVDU19A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB18ABC",
+neighborName = "SVDU19B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB18ABC",
+neighborName = "SVDU19C",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: C17-2
+hostname = "QSEB18ABC",
+neighborName = "QSEB17ABC",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB17ABC",
+neighborName = "SVDU18A",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB17ABC",
+neighborName = "SVDU18B",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB17ABC",
+neighborName = "SVDU18C",
+hostPortId = 4,
+neighborPortId = 3;
+
+hostname = "ADBG2",
+neighborName = "QSEB17ABC",
+hostPortId = 5,
+neighborPortId = 11;
+
+#
+# End of loop C
+#
+
+#
+# Beginning of loop D ############################################
+#
+# QSEB LoopID D1-1
+hostname = "ADBG1",
+neighborName = "QSEB6DF",
+hostPortId = 3,
+neighborPortId = 11;
+
+hostname = "QSEB6DF",
+neighborName = "SVDU6D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU6D",
+neighborName = "TPMU6D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB6DF",
+neighborName = "SVDU6F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU6F",
+neighborName = "TPMU6F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: D2-2
+hostname = "QSEB6DF",
+neighborName = "QSEB7DF",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB7DF",
+neighborName = "SVDU7D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU7D",
+neighborName = "TPMU7D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB7DF",
+neighborName = "SVDU7F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU7F",
+neighborName = "TPMU7F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: D3-2
+hostname = "QSEB7DF",
+neighborName = "QSEB8DF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB8DF",
+neighborName = "SVDU8D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU8D",
+neighborName = "TPMU8D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB8DF",
+neighborName = "SVDU8F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU8F",
+neighborName = "TPMU8F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: D4-2
+hostname = "QSEB8DF",
+neighborName = "QSEB9DF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB9DF",
+neighborName = "SVDU9D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU9D",
+neighborName = "TPMU9D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB9DF",
+neighborName = "SVDU9F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU9F",
+neighborName = "TPMU9F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: D5-2
+hostname = "QSEB9DF",
+neighborName = "QSEB10DF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB10DF",
+neighborName = "SVDU10D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "SVDU10D",
+neighborName = "TPMU10D",
+hostPortId = 66,
+neighborPortId = 90;
+
+hostname = "QSEB10DF",
+neighborName = "SVDU10F",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "SVDU10F",
+neighborName = "TPMU10F",
+hostPortId = 66,
+neighborPortId = 90;
+
+# QSEB LoopID: D6-1
+hostname = "QSEB10DF",
+neighborName = "QSEB17DEF",
+hostPortId = 11,
+neighborPortId = 11;
+
+hostname = "QSEB17DEF",
+neighborName = "SVDU18D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB17DEF",
+neighborName = "SVDU18E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB17DEF",
+neighborName = "SVDU18F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D7-1
+hostname = "QSEB17DEF",
+neighborName = "QSEB18DEF",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB18DEF",
+neighborName = "SVDU19D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB18DEF",
+neighborName = "SVDU19E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB18DEF",
+neighborName = "SVDU19F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D8-1
+hostname = "QSEB18DEF",
+neighborName = "QSEB19DEF",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB19DEF",
+neighborName = "SVDU20D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB19DEF",
+neighborName = "SVDU20E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB19DEF",
+neighborName = "SVDU20F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D9-1
+hostname = "QSEB19DEF",
+neighborName = "QSEB20DEF",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB20DEF",
+neighborName = "SVDU21D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB20DEF",
+neighborName = "SVDU21E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB20DEF",
+neighborName = "SVDU21F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D10-1
+hostname = "QSEB20DEF",
+neighborName = "QSEB21DEF",
+hostPortId = 10,
+neighborPortId = 11;
+
+hostname = "QSEB21DEF",
+neighborName = "SVDU22D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB21DEF",
+neighborName = "SVDU22E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB21DEF",
+neighborName = "SVDU22F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D11-2
+hostname = "QSEB21DEF",
+neighborName = "QSEB11DEF",
+hostPortId = 10,
+neighborPortId = 10;
+
+hostname = "QSEB11DEF",
+neighborName = "SVDU11D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB11DEF",
+neighborName = "SVDU11E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB11DEF",
+neighborName = "SVDU11F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D12-2
+hostname = "QSEB11DEF",
+neighborName = "QSEB11-DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB11-DEF",
+neighborName = "SVDU12D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB11-DEF",
+neighborName = "SVDU12E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB11-DEF",
+neighborName = "SVDU12F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D13-2
+hostname = "QSEB11-DEF",
+neighborName = "QSEB12DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB12DEF",
+neighborName = "SVDU13D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB12DEF",
+neighborName = "SVDU13E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB12DEF",
+neighborName = "SVDU13F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D14-2
+hostname = "QSEB12DEF",
+neighborName = "QSEB13DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB13DEF",
+neighborName = "SVDU14D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB13DEF",
+neighborName = "SVDU14E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB13DEF",
+neighborName = "SVDU14F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D15-2
+hostname = "QSEB13DEF",
+neighborName = "QSEB14DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB14DEF",
+neighborName = "SVDU15D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB14DEF",
+neighborName = "SVDU15E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB14DEF",
+neighborName = "SVDU15F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D16-2
+hostname = "QSEB14DEF",
+neighborName = "QSEB15DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB15DEF",
+neighborName = "SVDU16D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB15DEF",
+neighborName = "SVDU16E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB15DEF",
+neighborName = "SVDU16F",
+hostPortId = 4,
+neighborPortId = 3;
+
+# QSEB LoopID: D17-2
+hostname = "QSEB15DEF",
+neighborName = "QSEB16DEF",
+hostPortId = 11,
+neighborPortId = 10;
+
+hostname = "QSEB16DEF",
+neighborName = "SVDU17D",
+hostPortId = 2,
+neighborPortId = 3;
+
+hostname = "QSEB16DEF",
+neighborName = "SVDU17E",
+hostPortId = 3,
+neighborPortId = 3;
+
+hostname = "QSEB16DEF",
+neighborName = "SVDU17F",
+hostPortId = 4,
+neighborPortId = 3;
+
+hostname = "ADBG2",
+neighborName = "QSEB16DEF",
+hostPortId = 3,
+neighborPortId = 11;
+
+#
+# End of loop D
+#
+
